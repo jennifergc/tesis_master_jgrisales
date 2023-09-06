@@ -1,0 +1,100 @@
+\begin{comment}
+
+
+\section{Cascadas generadas por un fotón o un electrón} \label{sec:cascfot}
+
+Una de las tareas fundamentales en el análisis de los eventos registrados por los detectores de astropartículas en los observatorios, es la identificación del tipo de primario que generó la señal y su energía. Para ello, se deben caracterizar las diferencias en los procesos de interacción predominantes, dependiendo de la la naturaleza del primario incidente. Por ejemplo, cuando el primario es un fotón o un electrón, los principales canales de interacción son la producción de pares y radiación de frenado (\textit{bremsstranhlung}). Los fotones con energía suficiente producen pares electrón positrón y estos perderán energía por radiación de frenado generando más fotones. El proceso se detiene cuando la energía de los fotones radiados alcance los 1.02 MeV. Por ejemplo, para un núcleo de aire con carga $Z$ y número atómico $A$, los procesos de producción son:
+
+\begin{equation}
+\begin{split}
+&Bremsstrahlung\quad e \quad \xrightarrow{Y^{A}_{Z}} \quad e\gamma ,  \quad y \\
+&Pares \quad \gamma \xrightarrow{Y^{A}_{Z}} \quad e^{+}e^{-} \\
+\end{split}
+\label{eq:eq11}
+\end{equation} 
+
+En la detección indirecta de partículas primarias, un objetivo fundamental es saber cuáles partículas pueden llegar al detector y con qué fracción de energía del primario lo harán, por lo cual, es indispensable caracterizar las pérdidas de energía en función de la cantidad de aire que atraviesa la partícula. 
+
+Se define la longitud de la interacción electromagnética $X_{EM}$ como la cantidad de aire atravesado por una partícula en dos situaciones: cuando el electrón pierde una fracción equivalente al 63$\%$ de su energía por radiación de frenado o cuando el fotón recorre $\approx 7/9$ del camino libre medio de producción de pares \footcite[][]{heitler}. La expresión general de $X_{EM}$ para leptones cargados es:
+
+\begin{equation}
+X_{EM}=716.4\frac{A}{Z(Z+1)\ln\left(\frac{287}{\sqrt{Z}}\right)} \ [\mbox{g}\ \mbox{cm}^{-2}] .
+\label{eq:eq12}
+\end{equation} 
+
+Además, a medida que un electrón disipa energía, las pérdidas por ionización comienzan a ser comparables a la producción de fotones por frenado y, al alcanzar su energía crítica, se detiene la producción de fotones. La energía crítica es el valor de energía donde las pérdidas por ionización luego de recorrer una longitud de interacción son equivalentes a la energía del electrón \footcite[][]{asorey}. Para predecir este valor, se usa la expresión:
+
+\begin{equation}
+E_{c}^{EM} = \frac{a}{(Z+b)^\alpha}.
+\label{eq:eq13}
+\end{equation}
+
+Donde los parámetros $a$,$b$ y $\alpha$ dependen de las características del medio. Usando los valores para el aire \footcite[][]{PDG} se obtiene un valor de 94 $MeV$ .
+
+Un modelo simplificado que permite predecir el desarrollo de la lluvia, es el modelo de Heitler \footcite[][]{heitler}. En este modelo, se considera la componente electromagnética como un árbol binario, donde, luego de recorrida una distancia característica $\lambda_{EM}$, cada partícula interactúa y produce dos nuevas partículas, cada una con la mitad de la energía que su antecesora. Así, el número de partículas crece exponencialmente como $N \approx 2^{n}$ con $n$ el número de interacciones y consecuentemente, la energía decrece como $E \approx E_{p}/2^{n}$ y el proceso se detiene cuando la energía media iguala a la energía crítica $E_{c}$ que ocurre a una profundidad atmosférica dada por:
+
+\begin{equation}
+X_{max}^{EM} \approx log_{2}\left(\frac{E_{0}}{E_{c}^{EM}}\right).
+\label{eq:eq14}
+\end{equation}
+
+
+
+\section{Cascadas generadas por un protón o hadrón} \label{sec:caschad}
+
+Los hadrones son partículas subatómicas, no elementales, constituidas gracias a la fuerza nuclear fuerte. Las interacciones entre hadrones dan origen a piones cargados, neutros ($\pi^{-},\pi^{+},\pi^{0}$) y kaones que tienden a decaer antes que a interactuar. Los canales de decaimiento con mayor probabilidad para estas partículas son:
+
+\begin{equation*}
+\pi^{0} \rightarrow \gamma\gamma \quad \mbox{[98.823 $\pm$0.034 $\%$]} \quad y
+\end{equation*}
+%
+\begin{equation}
+\pi^{0} \rightarrow e^{+}e^{-} \gamma \quad \mbox{[1.174 $\pm$0.035 $\%$]} .
+\label{eq:eq15}
+\end{equation}
+%
+Estos canales contribuyen a la componente electromagnética de la lluvia. Los piones cargados dan origen a la componente muónica mediante los siguientes procesos:
+
+\begin{equation*}
+\pi^{+} \rightarrow \mu^{+}\nu_{\mu} \quad \mbox{[99.98 $\pm$0.00004 $\%$]} \quad y
+\end{equation*}
+%
+\begin{equation}
+\pi^{-} \rightarrow \mu^{-}\nu_{\mu} \quad \mbox{[99.98 $\pm$0.00004 $\%$]} .
+\label{eq:eq16}
+\end{equation}
+
+También, mesones extraños, principamnete Kaones producen muones luego de decaer mediante los canales,
+
+\begin{equation*}
+K^{+} \rightarrow \mu^{+}\nu_{\mu} \quad \mbox{[63.56 $\pm$0.11 $\%$]},
+\end{equation*}
+%
+\begin{equation}
+K^{+} \rightarrow \pi^{0}e^{+}\nu_{e} \quad \mbox{[5.07 $\pm$0.004 $\%$]},
+\label{eq:eq17}
+\end{equation}
+%
+\begin{equation*}
+K^{+} \rightarrow \pi^{+}\pi^{0} \quad \mbox{[20.67 $\pm$0.08 $\%$]} \quad y
+\end{equation*}
+%
+\begin{equation*}
+K^{+} \rightarrow \pi^{+}\pi^{+}\pi^{-} \quad \mbox{[5.583 $\pm$0.024$\%$]} .
+\end{equation*}
+
+La componente muónica contiene información relevante de lo ocurrido en las primeras interacciones hadrónicas, y reflejan en forma más directa las propiedades del hadrón inicial. En los muones de más alta energía producidos en las primeras interacciones, predominan los efectos radiativos, caracterizados por pequeñas secciones eficaces y grandes fluctuaciones en la energía de las partículas resultantes. Debido a estos efectos, los muones desencadenan sub-cascadas electromagnéticas en la lluvia vía producción de pares \footcite[][]{asorey}:
+
+\begin{equation}
+\mu^{\pm} \quad \xrightarrow{Y^{A}_{Z}} \quad \mu^{\pm}e^{+}e^{-},
+\label{eq:eq18}
+\end{equation}
+
+además de sub-cascadas hadrónicas, gracias a interacciones del tipo:
+
+\begin{equation}
+\mu^{\pm} \quad \xrightarrow{Y^{A}_{Z}} \quad \mu^{\pm} + hadrones.
+\label{eq:eq19}
+\end{equation}
+
+\end{comment}

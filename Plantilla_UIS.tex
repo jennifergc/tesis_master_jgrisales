@@ -1,0 +1,89 @@
+% ------------------------------------------------------------------------
+%
+% -------------------      Plantilla_UIS.tex       -----------------------
+%               ESTE ES EL MAIN.TEX ESTE ARCHIVO LLAMA A TODOS LOS ARCHIVOS QUE COMPONEN LA TESIS....
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% Versión de plantilla para realización de informes de trabajo de grado
+% construida para uso de la Universidad Industrial de Santander.
+%
+% Reservados todos los derechos
+%
+% Bucaramanga, Colombia
+%
+% Febrero 03 de 2019
+%
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+%
+% ------------------------------------------------------------------------
+\documentclass[letter,oneside,12pt,spanish]{report}          % Encabezados
+% ------------------------------------------------------------------------
+\usepackage{uislatexstyleAPA}                           % Libreria UIS APA
+% ------------------------------------------------------------------------
+% Ingrese en este punto las librerías específicas de usuario
+% ------------------------------------------------------------------------
+\usepackage{epsfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfigure}
+% ------------------------- NUEVO-----------------------------------------------
+\bibliography{xbib.bib}
+% ------------------------------------------------------------------------
+\begin{document}                                     % Inicio de documento
+% ------------------------------------------------------------------------
+% Definición silábica de palabras
+% ------------------------------------------------------------------------
+%\hyphenation{pro-por-cio-nal di-se-ño}
+% ------------------------------------------------------------------------
+% Titulo resumido del trabajo que aparecerá en cornisa
+% ------------------------------------------------------------------------
+\title{Caracterización de perfiles atmosféricos para la colaboración LAGO}
+% ------------------------------------------------------------------------
+% Elementos previos al contenido del trabajo
+% ------------------------------------------------------------------------
+\include{Secs/P0}             % Portadilla, formato de nota y autorización
+% ------------------------------------------------------------------------
+\include{Secs/Dedicatoria}                                   % Dedicatoria
+% ------------------------------------------------------------------------
+\include{Secs/Agradecimientos}                           % Agradecimientos
+% ------------------------------------------------------------------------
+\tableofcontents                                      % Tabla de contenido
+% ------------------------------------------------------------------------
+\listoffigures                         % Lista de figuras, tablas y anexos
+\listoftables
+\listofanexo
+% ------------------------------------------------------------------------
+%\include{Secs/glosario}                             % Glosario de términos
+% ------------------------------------------------------------------------
+% Contenido del Informe
+% ------------------------------------------------------------------------
+\include{Secs/resumen}                                               % Resumen
+\include{Secs/Abstract}                                              % Abstract
+% ------------------------------------------------------------------------
+% Capítulos
+% ------------------------------------------------------------------------
+\include{Secs/intro}   % Introducción
+%\include{Secs/T1}   % Objetivos
+\include{Secs/chapter_1}  
+\include{Secs/chapter_2} 
+\include{Secs/chapter_3}   
+\include{Secs/Conclusiones}   % Conclusiones
+% ------------------------------------------------------------------------
+% Bibliografía
+% ------------------------------------------------------------------------
+\addcontentsline{toc}{chapter}{Referencias Bibliográficas}\newpage
+\noindent
+%\bibliographystyle{apalike}
+\printbibliography
+% ------------------------------------------------------------------------
+% Anexos
+% ------------------------------------------------------------------------
+\include{Secs/APENDICE_A}   
+\include{Secs/APENDICE_B}   
+\include{Secs/APENDICE_C}
+% ------------------------------------------------------------------------
+\end{document}                                          % Fin de documento
+% ------------------------------------------------------------------------ 
