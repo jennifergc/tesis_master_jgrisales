@@ -1,0 +1,26 @@
+%%%%%%%%%%
+El código que proporcionaste calcula la correlación cruzada entre dos series de datos igualmente espaciadas. La correlación cruzada es una medida de cuán relacionadas están dos series de tiempo cuando una de ellas se desplaza en relación con la otra. En este caso, se está calculando la correlación cruzada entre las series "oulu" y "sunspots" con varios desplazamientos (ΔΔ).
+
+Aquí está cómo funciona:
+
+    Se calculan los valores medios de ambas variables: mean_counts y mean_sunspots.
+
+    Se establece un número máximo de desplazamientos a considerar, llamado max_lag. Esto determina cuántos desplazamientos diferentes se explorarán.
+
+    Se calculan las desviaciones estándar normalizadas (δpδp​ y δqδq​) para ambas series de datos. Esto se hace para normalizar las series antes de calcular la correlación cruzada.
+
+    Se inicializa una lista llamada cross_correlations que se usará para almacenar los coeficientes de correlación cruzada calculados para diferentes desplazamientos.
+
+    Luego, se entra en un bucle que recorre todos los desplazamientos posibles, desde -max_lag hasta max_lag.
+
+    Para cada desplazamiento (ΔΔ), se calcula la suma del producto de las diferencias entre los valores de las series "oulu" y "sunspots" y sus respectivas medias, para cada par de puntos de datos que se solapan después del desplazamiento.
+
+    Luego, se calcula el coeficiente de correlación cruzada para el desplazamiento actual utilizando la fórmula estándar de correlación cruzada, que es la covarianza normalizada de las series. Este coeficiente se almacena en la lista cross_correlations.
+
+    Finalmente, se grafican los resultados. La gráfica muestra cómo varía la correlación cruzada en función del desplazamiento (ΔΔ). El desplazamiento cero (Δ=0Δ=0) representa la correlación entre las dos series sin ningún desplazamiento.
+
+El coeficiente de correlación cruzada para un desplazamiento de cero (Δ=0Δ=0) indica cuánto se correlacionan las dos series sin ningún desplazamiento. Si el valor es cercano a 1, significa una alta correlación positiva. Si el valor es cercano a -1, significa una alta correlación negativa. Si el valor es cercano a 0, significa que no hay correlación.
+
+Al examinar la gráfica, puedes observar cómo cambia la correlación cruzada a medida que se aplica un desplazamiento a una de las series. Esto puede ayudarte a identificar patrones o relaciones entre las dos series a lo largo del tiempo.
+
+%%%%%%%%%%%%%

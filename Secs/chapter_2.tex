@@ -3,180 +3,159 @@
 \newpage
 \newpage
 
+\chapter{El Observatorio Pierre Auger}
 
-\chapter{Estimación del flujo de fondo de secundarios}
+El Observatorio Pierre Auger es el observatorio de rayos cósmicos más grande del mundo, con un área de detección de alrededor de  $3000 km^{2}$ enfocado en la detección indirecta de rayos cósmicos de ultra alta energía $(E > 10^{18} eV)$, cuya tasa de arribo a la tierra está entre 1 partícula $ km^{2}/year$ a 1 partícula $km^{2}/century$. El observatorio es un arreglo híbrido, que está constituido principalmente por dos tipos de detectores: los telescopios de fluorescencia atmosférica FD y los detectores Chérenkov de superficie SD. El objetivo de este detector híbrido es proporcionar estadísticas de alto nivel y reducir las incertidumbres sistemáticas en la medición de las energías de los rayos cósmicos. A continuación, se hará una revisión de las generalidades de cada uno de estos detectores.    
 
-\noindent La colaboración LAGO estudia la influencia de la actividad solar en las variaciones del flujo de partículas secundarias, producidas durante la interacción de los rayos cósmicos con la atmósfera. Este estudio se realiza usando detectores Cherenkov de agua, o WCD. Para estudiar los datos obtenidos por estos detectores, es necesario estimar el flujo de secundarios al nivel de suelo. Dicho flujo, debe calibrarse a partir de simulaciones detalladas que tengan en cuenta todas las posibles causas de fluctuación. Para ello, se ha desarrollado una cadena de simulaciones organizadas en tres bloques principales. Como primer paso, se deben  encontrar los efectos del campo geomagnético en la propagación de partículas cargadas, que contribuyen a la radiación de fondo a nivel del suelo y que se caracterizan por la rigidez de corte en cada sitio LAGO  \citep{lagoSW}. Luego, estimar el flujo de partículas secundarias al nivel de los detectores, originado por la interacción de los primarios con la atmósfera \citep{Model}, usando el software CORSIKA  \citep{Heck1998}. Por último, obtener la respuesta del detector para los diferentes tipos de  partículas secundarias, ( \citep{andrei},  \citep{MuTe}) usando los códigos de GEANT4  \citep{GEANT4}.\\
+\section{Detector de Fluorescencia}
+El detector de fluorescencia está diseñado para detectar el desarrollo longitudinal de las lluvias de partículas secundarias generadas por rayos cósmicos de muy alta energía. Esto es posible gracias a que al propagarse por la atmósfera los RC secundarios excitan el nitrógeno liberando luz fluorescente en el rango de 300nm a 430nm. El criterio principal de su diseño es la detección de cada lluvia con energías de al menos $10^{19}eV$ (\cite{Aab_2015}). Este arreglo consta de 24 telescopios independientes distribuidos en 4 sitios, cada uno con un campo de visión de $30^o x 30^o$ . En este fenómeno, el número de fotones producidos es proporcional a la energía de la componente electromagnética de la lluvia y al número total de partículas generadas a cierta profundidad atmosférica (\cite{asorey}). \footnote{La profundidad atmosférica $X$, es un parámetro que permite estimar la cantidad de materia con la que ha interactuado el primario al penetrar en la atmósfera. La expresión:
+\begin{equation}
+X_{v}= \int_{h}^{\infty} \rho (h') dh',
+\label{integral}
+\end{equation}
+}
 
-Actualmente, para la segunda parte de la cadena de simulaciones, LAGO usa perfiles atmosféricos de la configuración ATMEXT de CORSIKA. Sin embargo, para precisar las estimaciones de flujo, se debe modelar la variabilidad de la atmósfera y establecer parámetros que permitan obtener perfiles atmosféricos precisos. Además, de ser posible hay que compararlos con los perfiles usados actualmente en cada sitio. Es por ello que el presente trabajo se concentra en la construcción y valoración de nuevos perfiles atmosféricos. A continuación, se presenta la forma como puede estimarse, el flujo de secundarios en un punto de observación determinado mediante CORSIKA, y la metodología que se usará para la obtención de estos perfiles en base al Sistema Global de Asimilación de datos GDAS.\\
-
-%usando CORSIKA
-%Por tal razón, es
-
-\section{Flujo de fondo a nivel de Bucaramanga}
-
-El flujo de partículas secundarias que llegan al nivel de los detectores, corresponde a la cantidad de partículas que atraviesan un área, en un nivel de observación determinado y en un intervalo de tiempo. Dicho flujo depende principalmente de dos factores: el flujo de primarios que llegan a la atmósfera, y la composición de ésta.\\
-
-Para caracterizar el flujo de primarios se considera el flujo diferencial. Como se mencionó en el capítulo anterior, corresponde al n\'umero de astropartículas que llegan con una energía determinada $dE$ en un ángulo sólido $d\Omega$. Así, usando datos experimentales para diferentes tipos de partículas,  se puede obtener una distribución aproximada de las partículas interactuantes para un intervalo de tiempo $t$ como se muestra en la figura \ref{fig:fig8}. \\
-\begin{figure}[htb!]
+\begin{figure}[!ht]
 \centering
-\includegraphics[width=0.5\textwidth]{Figs/differential_flux_by_nuclei.png}
-\caption[Flujo de astropartículas como función de su energía.]{Flujo de núcleos de astropartículas como función de su energía  \citep{mauro:oxigen}. Los datos son tomados a partir de detecciones directas por satélites. Para mejorar la lectura de la gráfica, el flujo para cada núcleo está multiplicado por un factor de escala.}
- \label{fig:fig8}
+\includegraphics[width=1\textwidth]{Figs/FD_auger_composition.png}
+\caption{a) Mapa donde se muestra la ubicación del Observatorio Pierre Auger y de sus sistemas detectores. Los puntos amarillos corresponden a los detectores de superficie SD, y los 4 puntos negros en las fronteras, corresponden a la ubicación de los detectores de fluorescencia FD (\cite{asorey}). b) Los puntos grises muestran las posiciones de las estaciones de detectores de superficie. Los semicírculos en gris claro indican los campos de visión de 24 telescopios de fluorescencia situados en cuatro edificios en el perímetro de los detectores de superficie (\cite{FD_auger}). c) Esquema de uno de los cuatro edificios con seis telescopios de fluorescencia en su interior logrando un campo de visión de $180^{o}$ (\cite{FD_auger}). d) Estructura de un telescopio FD. El sistema de apertura consta de un diafragma, un anillo corrector y un filtro UV. Los demás componentes ópticos son el Los otros componentes ópticos son el espejo y la cámara, que incluye un conjunto de 20x22 PMT (\cite{dedonato_2007}).}
+\label{fd_auger}
 \end{figure}
 
-\newpage
+El arreglo utiliza un filtro UV para dejar pasar solo luz ultravioleta (UV) en el rango de 330 a 380 nanómetros que corresponde al rango de interés para las observaciones. Además, los telescopios están diseñados para funcionar únicamente durante noches despejadas sin Luna, lo que reduce el ruido de fondo y mejora la precisión de las mediciones. 
+
+\section{Detector de superficie SD}
+
+El Observatorio Pierre Auger cuenta con un detector de superficie que comprende una matriz de 1660 estaciones de detección de agua Cherenkov (WCD), abarcando un área total de 3000$km^{2}$. Estas estaciones están distribuidas en una red hexagonal de $1.5km$ entre cada una. Dicha configuración está diseñada para estudiar el desarrollo transversal de todas las lluvias de partículas generadas por partículas primarias de al menos $10^{18} eV$ a nivel del suelo.
+
+Dado el tamaño del área cubierta, las estaciones deben operar de manera autónoma y requerir poco mantenimiento (\cite{SD_auger}). Por lo tanto, estos detectores están interconectados a través de una red inalámbrica de área local (WLAN), cuyo receptor principal es el telescopio de fluorescencia (FD) más cercano, que se encarga de transmitir los datos a la central de recopilación principal CDAS.
+
+\subsection{Efecto Chérenkov}
+
+Cuando una partícula con carga se mueve a través de un medio, su pérdida de energía aumentará a medida que la densidad del medio se incremente. Si consideramos que la densidad $\rho$ del medio es constante y que \textit{b} es el parámetro de impacto, la energía que pierde la partícula al atravesar una sección de longitud \textit{dl} dentro de un cilindro de radio \textit{a}, cuyo eje coincide con la dirección de movimiento, se puede expresar como $\frac{dE}{dl} = \rho \frac{dE}{dX}$. Esta pérdida de energía está determinada por el flujo del vector de Poynting, con la componente longitudinal $E_{1}$ del campo eléctrico, y con la componente transversal del campo magnético $B_{3}$ presentes en el medio, en función de la frecuencia $\omega$ (\cite{fermi_1940}).
+\begin{equation}
+    \frac{dE}{dl} = -ca \mathcal{R}\left(\int_{0}^{\infty} B^{*}E_{1}(\omega) \, d\omega\right)
+    \label{fermi1}
+\end{equation}
+%%%%%%%%%%%%%%%%% PARENTESISSSSS
+Consideremos una partícula cargada que se desplaza a una velocidad $v=\beta c$ a través de un medio con una constante dieléctrica $\epsilon(\omega)$ y un número atómico $Z$. En este escenario, la longitud de onda de la radiación emitida se modificará debido a la presencia del medio de la siguiente manera:
+\begin{equation}
+\lambda^{2}=\frac{\omega^{2}}{v^{2}}(1-\beta^{2}\epsilon(\omega))
+\label{lamdamod}
+\end{equation}
+Teniendo en cuenta las expresiones para los campos $E$ y $B$, el integrando de la ecuación \ref{fermi1} obtenemos:
+\begin{equation}
+B^{}E_{1}(\omega)=\left(\frac{Ze}{c}\right)^2 \left(-i\sqrt{\frac{\lambda^{}}{\lambda}}\right)\left(1-\frac{1}{\beta^{2}\epsilon(\omega)}\right)exp[-a(\lambda+\lambda^{*})]\omega
+\end{equation}
+En este caso, si $\lambda$ es un número imaginario puro, $\lambda^{*}=-\lambda$ lo que haría 
+$exp[-a(\lambda+\lambda^{*})] = 1$ y por consiguiente la expresión \ref{fermi1} sería independiente de $a$, donde parte de la energía escapa al infinito en forma de emisión coherente de radiación (\cite{asorey}). Esto sucede si $\epsilon$ es real, es decir que el medio no es absorbente y que $\beta^{2}\epsilon(\omega)>1$ ó $\beta=\frac{1}{\sqrt{\epsilon(\omega)}}$, o en otras palabras, si la velocidad de la partícula cargada es mayor que la velocidad de la luz en el medio a una frecuencia $\omega$, fenómeno conocido como \textit{Efecto Cherenkov}.
+
+Si el medio es ligeramente absorbente la expresión \ref{fermi1} queda como:
+\begin{equation}
+\left(\frac{dE}{dl}\right)_{Cherenkov}=\left(\frac{Ze}{c}\right)\int{\beta^{2}\epsilon(\omega)>1} \omega\left(1-\frac{1}{\beta^{2}\epsilon(\omega)}\right)d\omega
+\end{equation}
+donde se observa que la emisión de radiación depende de la frecuencia. En el caso del agua, en el espectro visible, la radiación Cherenkov se produce a longitudes de onda cortas, donde  $n(\omega) \approx \sqrt{\epsilon(\omega)}$ aumenta levemente con la frecuencia. El ángulo de emisión de la radiación está definido entonces por:
+\begin{equation}
+cos\theta_{c}=\frac{1}{\beta\sqrt{\epsilon(\omega)}},
+\end{equation}
+Para el rango de frecuencias de interés (cerca del ultravioleta), el valor del índice de refracción puede ser considerado constante, con lo que podemos obtener el número de fotones Cherenkov producidos en un intervalo de longitudes de onda como sigue,
+\begin{equation}
+N=2\pi \alpha_{EM}l\left(1-\frac{1}{\beta^{2}n^{2}}\right)\left(\frac{1}{\lambda_{2}}-\frac{1}{\lambda_{1}}\right),
+\label{cherenkovnumber}
+\end{equation}
 
 
-De esta manera, se simulan individualmente cada una de los primarios. Recolectando al final, información de la totalidad de secundarios en el punto de observación. Por ejemplo, para simular un flujo en un tiempo de 120 segundos, se obtiene la siguiente distribución primarios:
-\begin{table}[]
-%\scriptsize
-\begin{minipage}{1\textwidth}
-			\caption[Distribución de primarios en un tiempo de 120 segundos.]{ \raggedright Distribución de primarios que se deben simular para estimar el flujo de secundarios en 120 s ala altura de Bucaramanga. La primera columna corresponde al código de identificación de cada núcleo en CORSIKA, la segunda el símbolo del elemento, y la tercera columna corresponde a la cantidad de núcleos que se simularán para el tiempo escogido.}
-\end{minipage}
-\begin{center}
-\begin{tabular}{lll}
-\hline
-\multicolumn{1}{c}{\textbf{ID}} & \multicolumn{1}{c}{\textbf{Partícula}} & \multicolumn{1}{c}{\textbf{Cantidad}} \\ \hline
-1 & H & 562322 \\ \hline
-402 & He & 56595 \\ \hline
-1206 & C & 1458 \\ \hline
-1608 & O & 1410 \\ \hline
-703 & Li & 574 \\ \hline
-1105 & B & 396 \\ \hline
-2412 & Mg & 335 \\ \hline
-2814 & Si & 322 \\ \hline
-1407 & N & 295 \\ \hline
-2010 & Ne & 259 \\ \hline
-5626 & Fe & 195 \\ \hline
-904 & Be & 167 \\ \hline
-3216 & S & 51 \\ \hline
-2713 & Al & 44 \\ \hline
-2311 & Na & 38 \\ \hline
-4020 & Ca & 30 \\ \hline
-1909 & F & 25 \\ \hline
-5224 & Cr & 19 \\ \hline
-4018 & Ar & 18 \\ \hline
-4822 & Ti & 17 \\ \hline
-5525 & Mn & 13 \\ \hline
-3919 & K & 11 \\ \hline
-5123 & V & 10 \\ \hline
-3115 & P & 9 \\ \hline
-3517 & Cl & 8 \\ \hline
-4521 & Sc & 5 \\ \hline
-\end{tabular}
-\end{center} %\vspace{0.1em}
-			\label{tab:tabla2}
-\end{table}\\
+%%%%%%%%%%%%%%%%% PARENTESISSSSS
 
-\newpage
+%EN ALGÚN MOMENTO DE LA VIDA \hbar cambió por \hslash en esta joda y no me enteré....
 
-Donde la primera columna corresponde al código de identificación de cada núcleo en CORSIKA, la segunda el símbolo del elemento, y la tercera columna corresponde a la cantidad de núcleos que se simularán para el tiempo escogido. \\
+Donde $\alpha_{EM}=(e^2/ \hslash c)$ es la constante de estructura fina. Además, el momento de una partícula con masa en reposo $m_{0}$ y velocidad $\beta c$ es $p\equiv mv = \beta \gamma m_{0}c$, lo que permite calcular el número de fotones emitidos por una partícula con momento $p$ al recorrer una longitud $l$ en un medio con índice de refracción $n$. En el caso de los tubos fotomultiplicadores utilizados en el Observatorio Pierre Auger, que son sensibles al rango de $300 - 570nm$, es posible definir dos propiedades clave en la respuesta posterior de los detectores Cherenkov:
+\begin{itemize}
+\item La radiación solo se emite cuando $\beta>1/n$.
+\item El número de fotones emitidos por unidad de longitud tiende a un valor constante (ver figura \ref{stopping_cherenkov}), que solo depende del rango de longitudes de onda considerado, del índice de refracción del medio y la distancia recorrida en dicho medio. De esta manera, la señal en el detector no proviene de la energía depositada, sino de la cantidad de fotones producidos, es decir, de la distancia recorrida por la partícula en el agua (\cite{asorey}).
+\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{Figs/cherenkov_stopping.png}
+\caption{a) Arriba: ilustración de la polarización del medio inducida por el paso de una partícula relativista. Abajo: Construcción del frente de onda de Cherenkov. Fuente: \cite{deNaurois:2015oda} b) Esquema Producción de fotones Cherenkov en la banda $300 nm < \lambda < 570 nm$ según la ecuación \ref{cherenkovnumber} como función del impulso. La línea punteada corresponde a un electrón y la sólida a un muón luego de haber recorrido 1 cm en agua líquida. Se puede observar que la cantidad de fotones tiende rápidamente a un valor constante de $\thicksim 315$ fotones por centímetro incluyendo el momento más probable para las dos partículas. Fuente \cite{asorey}}
+\label{stopping_cherenkov}
+\end{figure}
+\subsection{El detector Cherenkov}
+ 
+%Para ampliar las capacidades del observatorio a energías más bajas, también se despliega una región de relleno de estaciones SD con un espaciado de 750 m (SD-750) [68]. 
+Cada Estación de Detección (SD) se compone de un recipiente cilíndrico con una superficie de base de 10$m^{2}$, lleno con 12 $m^{3}$ de agua de alta pureza que permite una mínima absorción de luz ultravioleta cercana. Esta agua se encuentra dentro de una bolsa fabricada con Tyvek, un material reflectante. Cuando las partículas relativistas atraviesan el volumen de agua, generan radiación Cherenkov que es reflejada y dispersada por el Tyvek en el interior del recipiente, lo que incrementa la probabilidad de detección (\cite{SD_auger}).
 
-Para simular el flujo de secundarios, se deben definir las condiciones iniciales. Estas deben ajustarse a las características con las que el flujo se genera de forma natural en la atmósfera. La siguiente, es la configuración con la que se realizarán las estimaciones de flujo  para este trabajo sobre la ciudad de Bucaramanga:\\
+Esta radiación es captada por tres tubos fotomultiplicadores (en adelante PMT, por sus siglas en inglés) Photonis XP1805/D1 de 9 pulgadas de diámetro (\cite{Aab_2015}), dispuestos de forma simétrica en la parte superior del tanque. Las señales analógicas de los PMT son convertidas a formato digital en la electrónica de la estación mediante convertidores de tipo flash de analógico a digital (FADC). Cada PMT registra el pulso que genera la detección de fotoelectrones que se caracteriza por tener un crecimiento rápido y un posterior decaimiento exponencial como se muestra en la figura \ref{fig:PMT}.
 
+%Cada SD consta de un tanque cilíndrico de 10$m^{2}$ de base con 12 $m^{3}$ de agua ultra pura que permita una baja absorción del ultravioleta cercano, dentro de una bolsa con un material reflectante realizada en Tyvek. La radiación Cherenkov producida por el paso de partículas relativistas a través del volumen de agua, es reflejada y difundida por el Tyvek en el interior, maximizando la probabilidad de detección \cite{asorey} y es registrada con tres tubos fotomultiplicadores (PMT) Photonis XP1805/D1 de 9 pulgadas de diámetro, (\cite{Aab_2015}) colocados simétricamente en la parte superior del tanque. Las señales analógicas provenientes de los PMT son digitalizadas en la electrónica de las estación mediante conversores analógicos digitales tipo flash (FADC).
+\begin{figure}[!ht]
+  \centering
+\includegraphics[width=1\textwidth]{Figs/SD_componentes.png}
+  \caption{Estructura de un detector de superficie SD. A la izquierda se observa el exterior de un detector WCD del Observatorio ubicado en la Pampa Amarilla. A la derecha vemos una representación de su interior: Al entrar la partícula cargada al agua se produce un cono de luz Cherenkov, estos fotones son reflejados por las paredes del detector y recogidos por los PMT ubicados simétricamente en la superficie superior. \cite{SD_auger}}
+  \label{fig:SD_auger}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+  \centering
+\includegraphics[width=0.6\textwidth]{Figs/PMTs_signal.png}
+  \caption{Señal del ánodo de cada PMT. Estas señales son digitalizadas mediante seis conversores FADC de 10 bits a una velocidad de muestreo de 40 MHz. La traza consiste en un bloque contiguo de 768 bines de señal de 25 ns cada uno, totalizando $19.2 \mu s$. Fuente: (\cite{asorey})}
+  \label{fig:PMT}
+\end{figure}
+Una de las ventajas de usar detectores Cherenkov es que se puede diferenciar el paso de los muones (o su decaimiento) y la absorción de los electrones. Los muones atmosféricos (con energías típicas de $E_\mu \thicksim 3GeV$), depositan en el detector solo una pequeña fracción de su energía cinética de tal forma que son capaces de atravesarlo. (El poder de frenado de muones en agua es de $\thicksim 2 MeV cm^{-1}$ en un amplio rango de energías ) (\cite{asorey}). La señal Cherenkov producida por muones depende únicamente de la longitud recorrida en el agua, determinada por la geometría del detector y la dirección del muón. Para muones con $E_\mu < 390 MeV$, su rango es menor que la profundidad del detector en posición vertical. Estos muones depositan toda su energía en el detector y pueden decaer en su interior.
+
+Por el contrario, los electrones cuyo rango de energía típico es de $\thicksim 20MeV$, poseen un poder de frenado de $\thicksim 2MeV cm^{-1}$, lo que provoca que al ingresar al agua se produzca una absorción total en el volumen del detector. El número total de fotones producidos, y por ende la señal registrada, muestra una fuerte dependencia de la energía inicial del electrón, alcanzando un máximo para trayectorias verticales que atraviesan completamente el detector ($\thicksim 3.8 x 10^{4}$ fotones). De esta forma, el detector actúa como calorímetro de electrones absorbiendo toda su energía cinética, la señal que se registra está relacionada solo con la emisión de fotones Cherenkov que se detiene antes de absorber completamente al electrón. 
+
+La diferenciación entre las señales producidas por fotones y muones se evidencia en la figura \ref{cargahist} donde contrasta la carga depositada durante un tiempo y medida por un tubo fotomultiplicador del observatorio. El pico inicial refleja la distribución de señales principalmente generadas por la componente electromagnética, sumada al efecto del umbral de detección. El segundo pico, por su parte, se relaciona con el paso de muones que atraviesan verticalmente el detector. La posición del pico para un muón central y vertical medido por un PMT del Observatorio es de $(1.03\pm0.02)$ \cite{asorey}.
+
+\begin{figure}[h!]
+  \centering
+\includegraphics[width=0.6\textwidth]{Figs/histograma_carga.png}
+  \caption{carga depositada durante un tiempo y medida por un tubo fotomultiplicador del observatorio. El pico inicial refleja la distribución de señales principalmente generadas por la componente electromagnética, sumada al efecto del umbral de detección. El segundo pico, por su parte, se relaciona con el paso de muones que atraviesan verticalmente el detector. Fuente: (\cite{asorey})}
+  \label{cargahist}
+\end{figure}
+Algunos parámetros de importancia referentes a los detectores cherenkov del Observatorio que serán necesarios para las secciones siguientes son:
+\begin{itemize}
+    \item \textbf{Cuentas ADC de pico:} Es la magnitud correspondiente al valor de salida del conversor FADC de tal forma que $1ADC_{p}= 1.95mV$ 
+    \item \textbf{Bin de la señal:} Intervalo entre dos pulsos sucesivos. Considerando que el conversor tiene una tasa de muestreo de 40MHz, se establece que $1bin\equiv \frac{1}{40MHz} = 25ns$
+    \item \textbf{Cuenas ADC de carga:} Unidad luego de integrar temporalmente la señal en $ADC_{p}$, restando la línea base.
+    \item \textbf{$VEM$ (\textit{Vertical Equivalent Muon}):} Es la carga total depositada por un muón que atraviesa completamente a un SD de forma vertical, un $MCV$ (\textit{muón central y vertical}). $1VEM=\frac{q_{VEM}}{1.03}ADC_{q}=240MeV$.
+    \item \textbf{$VEM_{p}$:} Es el equivalente a la altura máxima del pulso típico de la señal producido por un $MCV$: $1VEM_{P}=\frac{I_{VEM}}{1.03}ADC_{p}=240MeV$.
+    \item \textbf{Relación carga sobre pico $AoP$: } Es posible tener una idea de la respuesta impulsional del detector frente a los muones, relacionando las cargas integradas $(ADC_{q})$ y los voltajes $(ADC_{p})$ en la zona de pico de muones del histograma. De tal forma que: $AoP=\frac{ADC_{q}}{ADC_{p}}$ que correspondería a un parámetro fundamental de calibración.
+    \item \textbf{Sistema de disparo (trigger):} Es la estructura de 5 niveles que se establecen sobre el nivel de detección para seleccionar las señales producidas por los rayos cósmicos de interés sobre el fondo, con el objetivo de descartar ruidos y eventos físicos no relevantes para el observatorio. Por lo anterior, cada uno de los detectores registra de forma diaria un promedio de tres eventos diarios por detector.
+\end{itemize}
+
+\section{Medición del fondo de rayos cósmicos}
+
+El fondo de rayos cósmicos secundarios en la superficie de la Tierra es el resultado de las interacciones de los rayos cósmicos galácticos (GCRs) y el viento solar con la atmósfera terrestre. Como se describió en el capítulo 1, en el espectro de energía predominan estas dos fuentes (ver \ref{fig:spectrum}). Podría decirse que este fondo corresponde a un flujo constante de partículas que varía levemente debido a la actividad solar periódica y transitoria. El Observatorio Pierre Auger, aunque está optimizado para la identificación de partículas de ultra alta energía, tiene dos modos de detección alternativos de baja energía que registran el flujo de partículas secundarias al nivel de los detectores de superficie (SD): El modo Scaler y el modo Histograma. Este trabajo de investigación explora las características y propiedades del modo scaler aplicado al estudio del fondo de radiación natural y su variabilidad estrechamente relacionada con la actividad solar, aprovechando la capacidad de recolección de datos, la cantidad de detectores y la superficie cubierta por este arreglo. A continuación, veamos en qué consisten estos dos modos de baja energía.
+
+\subsection{Modo Scaler}
+
+En 1997, se propuso la implementación en el observatorio de un modo de detección que estuviera destinado a caracterizar el fondo y  con este, identificar lluvias atmosféricas extendidas originadas por los fotones provenientes de GRBs (destellos de rayos gamma)(\cite{asorey} \cite{bertou_2011}). Los GRB consisten en una emisión súbita de rayos gamma en periodos cortos de tiempo ($\cdot 10^{-3}s - \cdot 10^{2}s$) que continúa en la emisión de fotones cada vez menos energéticos (rayos X hasta radio). El espectro en energía de los fotones gamma observados durante la ocurrencia de un GRB, muestran que podrían llegar hasta energías de varios GeV (\cite{Bernlöhr_1996}).
+
+%El espectro de energía de los fotones gamma que han sido observados y reportados pueden llegar a energías en el rango de unidades de $GeV$ 
+
+El modo scaler consiste en determinar las tasas de conteo de pulsos individuales de cada SD en escalas de tiempo de un segundo \cite{asorey}. Con este método, se puede determinar el flujo de fondo sobre el arreglo y a partir de éste, identificar excesos generados por fenómenos transitorios diversos como por ejemplo un GRB, también pueden dar una idea de la tasa de rayos cósmicos de baja energía influidos por la modulación solar.
+
+Como es de esperarse, no todas las señales registradas con el SD corresponden a datos válidos para la determinación de este flujo. En primer lugar, la diferencia entre la línea base y el voltaje del pico del pulso debe cumplir las siguientes condiciones:
 
 \begin{itemize}
-    \item Componentes horizontal y vertical del campo magnético terrestre (en $\nu T$) correspondientes a $ 27,0263 \nu T$ y $17,176 \nu T$ respectivamente.
-    \item Nivel de observación, 950 m s.n.m. para Bucaramanga.
-    \item Tipo de primarios, núcleos desde el Hidrógeno hasta el Hierro.
-    \item Rango de energía de los primarios: de $5GeV$ a $1\cdot 10^{6} GeV$.
-    \item Ángulo cenital de incidencia de los primarios: de $0\circ$ hasta los $90\circ$.
-    \item Tiempo del flujo 4 horas = $14400 s$.
-    \item Tipo de detección: Volumétrica.
-    \item Perfil atmosférico: Para este trabajo se usan dos tipos de perfiles atmosféricos. El perfil Subtropical dentro de las rutinas ATMEXT, que es el usado hasta ahora para las simulaciones de flujo sobre Bucaramanga, y 12 perfiles atmosféricos mensuales creados a partir de la subrutina GDASTOOL de CORSIKA cuyas características explicaremos más adelante.
-\end{itemize}{}
+    \item Del 20 de Marzo hasta el 20 de Septiembre de 2005, este voltaje debe ser mayor a 3ADC
+    \item Desde el 21 de Septiembre del 2005, la diferencia de voltajes debe comprender entre: $3ADC < (V_{p}-V_{b}) \leq 20ADC $
+\end{itemize}
 
-\section{El sistema global de asimilación de datos, GDAS}
+Esta diferencia de periodos se sustenta en la necesidad de implementar un umbral de detección superior que permita una mejor relación señal a ruido \cite{GAP_2005}, y así superar las limitaciones en los datos que se venían recolectando. Dichos cambios en los umbrales fueron implementados desde el 21 de Septiembre del 2005.
 
-Para construir un modelo de atmósfera para CORSIKA, extraeremos datos del Sistema Global de Asimilación de Datos, GDAS \citep{GDAS_data}. Éste es un sistema de predicción numérica del clima en el que se construye un modelo que incorpora el comportamiento de la atmósfera como se encuentra en las observaciones meteorológicas. Los datos de GDAS están disponibles a través del Sistema Nacional de Archivo y Distribución de Modelos Operativos, NOAA. \\
-%GDAS incluye observaciones de superficie, datos de globos aerostáticos, datos del perfil de viento, informes de aeronaves, observaciones de boya, observaciones de radar y observaciones de satélite. 
+Los pulsos recopilados son guardados enviados una vez por segundo para su almacenamiento. Cada segundo de datos contiene: el tiempo en que se realizó el registro, número de estaciones activas, el número total de pulsos contados en todo el arreglo, y los conteos de pulsos para cada SD. Finalmente se obtiene un archivo de datos por día. Luego de esto, se deben eliminar los detectores que muestren inestabilidades respecto a la media, ruido producido por rayos, inestabilidades térmicas y relámpagos originados en tormentas eléctricas.  la tasa de recuento es de unos 2 kHz por detector y la energía depositada es de unos 15 a 100 MeV [74]. Usando simulaciones, se determina que las partículas primarias que crean las partículas secundarias contadas por el Scaler están entre 10 GeV y unos 10 TeV con una mediana de 90 GeV [76]
+%%%% CITAR ESTE PÁRRAFO ES TOMADO DE MARTIN
 
-\textbf{Sistema de asimilación de datos aplicado a la atmósfera: } GDAS, realiza un ajuste de un modelo que debe describir el estado de la atmósfera para unas variables determinadas en tiempo y altura siguiendo tres pasos fundamentales:\\
+\subsection{Modo histograma}
 
-1. Recolectar datos de los instrumentos que realizan observaciones meteorológicas ubicados alrededor del mundo. Estos incluyen tanto estaciones en Tierra, barcos y aviones, como radiosondas y satélites climáticos.\\
+El modo Histograma permite estudiar la variación de la tasa de conteo en diferentes rangos de energía depositada, asociados con diversas energías primarias de rayos cósmicos galácticos (GCRs). En el sistema de detección del Observatorio, corresponde al registro de los pulsos del fondo de radiación en intervalos de tiempo de 61 segundos \cite{asorey} . Estos registros permiten realizar la calibración del detector en un intervalo de tiempo determinado respecto a su respuesta impulsional y acompañan los eventos filtrados y almanecados por el sistema de trigger principal. 
 
-2. Utilizar el pronóstico a partir de una iteración previa del modelo, junto con la medición que describe un momento determinado. La predicción o primera estimación agrega más información al sistema, acerca del comportamiento atmosférico expresado en modelos matemáticos. \\%Los modelos usan ecuaciones diferenciales no lineales basados en termodinámica y dinámica de fluidos.\\
+%Se construyen en cada detector a partir de los histogramas de pico o pulsos y también de la carca depositada por cada señal. 
 
-3. Ajustar la salida del modelo al estado atmosférico medido.\\
+Después del proceso de calibración, a partir del VEM se pueden construir histogramas de energía depositada de hasta aproximadamente 1 GeV. El modo Histograma permite estudiar la variación de la tasa de conteo en diferentes rangos de energía depositada, asociados con diversas energías primarias de rayos cósmicos galácticos (GCRs) (\cite{asorey}, \cite{masias_2017}). Los dos rangos de energía de mayor interés son: el rango asociado a las energías depositadas en el modo Scaler (energía entre 60 MeV y 120 MeV), y el relacionado con las energías depositadas por muones con incidencia vertical (energía entre 200 MeV y 280 MeV), también denominado "banda muónica". 
 
-Un esquema que muestra esta secuencia, está representado en la figura \ref{fig:fig12}. A un tiempo dado, $ t_{0}$, las observaciones arrojan un valor de una variable de estado, y en ese mismo tiempo está disponible un pronóstico. La etapa de análisis combina observación y predicción para mejorar el modelo en $t_{0}$. Con ese ajuste, se realiza un pronóstico en un tiempo posterior $t_{1}$.
-
-\begin{figure}[htb!]
-\centering
-\includegraphics[width=0.55\textwidth]{Figs/gdas_data_assimilation.pdf}
-\caption[Representación del método de asimilación de datos.]{Representación de la evolución y tipo de la variable de estado en el tiempo, mediante el método de asimilación de datos   \citep{GDAS_Auger}. A un tiempo dado, $ t_{0}$, las observaciones arrojan un valor de una variable de estado, y en ese mismo tiempo está disponible un pronóstico. La etapa de análisis combina observación y predicción para mejorar el modelo en $t_{0}$. Con ese ajuste, se realiza un pronóstico en un tiempo posterior $t_{1}$.}
-        \label{fig:fig12}
-\end{figure}
-%Esta información adicional es necesaria porque las observaciones disponibles por sí solas no son suficientes.
-%Un esquema que muestra el principio de la asimilación de datos está dado en la figura [3]. A un tiempo dado $t_{0}$, las observaciones proveen el valor de una variable de estado.Una predicción del modelo para esta variable desde una iteración previa existe para el mismo tiempo. El paso de análisis combina la observación con la predicción para describir el estado $t_{0}$ mejor que en la predicción anterior. Este análisis es el punto inicial para el modelo de predicción de clima para un tiempo posterior $t_{1}$.\\
-
-%El primer paso para realizar una asimilación de datos completa es recopilar datos de instrumentos meteorológicos colocados en todo el mundo. Usando las condiciones atmosféricas en un instante determinado, un estado posterior en el tiempo se pronostica usando la predicción numérica del clima. Finalmente, la asimilación de datos se usa para ajustar la salida del modelo al estado atmosférico medido, dando como resultado una imagen tridimensional de la atmósfera. En un momento dado, el valor de una variable de estado se conoce a partir de observaciones y, para ese mismo momento, también existe un pronóstico del modelo para esta variable de una iteración anterior y así e proceso de asimilación de datos combina observación y pronóstico \citep{GDAS}.
-
-\textbf{Contenido de los datos}: GDAS realiza un análisis cuatro veces en el día: a las 0, 6, 12 y 18 UTC, y una predicción de entre 3,6 y 9 horas. La predicción numérica del clima usada en GDAS es el Sistema de Predicción Global (GFS)  \citep{GFS}. Los datos están disponibles cada 3 horas con 23 valores de presión desde los 1000hPa gasta los los 20hPa, en una malla global de  1$^{\circ}$ en longitud y en latitud, desde enero del 2005. Estos datos son guardados en archivos semanales y están disponibles online  \citep{GDAS_data}. \\
-
-Estudios previos, han evidenciado la confiabilidad del uso de perfiles atmosféricos construidos en base a GDAS para las estimaciones de EAS  \citep{GAP_2011}. Por esta razón, a continuación se presenta una metodología que permite la construcción y uso de perfiles atmosféricos mensuales usando esta herramienta. Esto con el fin de estudiar la sensibilidad que tiene el flujo de secundarios ante variaciones atmosféricas, para la ciudad de Bucaramanga.
-
-\section{Creaci\'on y comparaci\'on de perfiles atmosf\'ericos mensuales}
-Para construir los perfiles atmosféricos con GDAS, se ha utilizado la rutina de GDASTOOL de CORSIKA \citep{Heck1998} que extrae un perfil atmosférico para un día y hora específicas. GDASTOOL realiza la lectura de un archivo binario, del que interpreta y extrae información de la presión, altitud, temperatura y humedad, con los que realiza el cálculo de la densidad y presión atmosférica  \citep{GDAS_Auger}. Por último el código ajusta estos datos al modelo de 5 capas descrito en el capítulo anterior. Un esquema general se muestra en la figura \ref{fig:fig13}.
-\begin{figure}[htb!]
-\centering
-\includegraphics[width=0.85\textwidth]{Figs/GDASTOOL_code.pdf}
-\caption[Esquema de GDASTOOL]{Esquema del GDASTOOL, desde la lectura del archivo binario hasta el cálculo de los parámetros $a$, $b$ y $c$ que se realiza en función de las variables atmosféricas extraídas, y las ecuaciones (\ref{eq:eq25}) y (\ref{eq:eq26}).}
- \label{fig:fig13}
- \end{figure}
-%GDASTOOL ajusta estos datos a un modelo de 5 capas tal como es admitido por CORSIKA para las simulaciones, calculando los parámetros $a$, $b$ y $c$ con base en las ecuaciones (\ref{eq:eq25}) y (\ref{eq:eq26}).
-\newpage
-Para construir los perfiles mensuales, se ha creado un algoritmo computacional que usando el GDASTOOL, extrae datos de dos horas del día diferentes: 0:00 y las 12:00 UTC-5, para todos los días del año 2018, sobre cualquier posición geográfica, en nuestro caso, Bucaramanga (7.11 N, 73.11 E), como se observa en el esquema de la figura \ref{fig:fig14}. En total, se obtienen 730 perfiles, correspondiendo a dos perfiles por cada día del mes. En la figura \ref{fig:fig15}, se observan los primeros 62 perfiles de densidad para el mes de enero en Bucaramanga y el resultado de promediarlos para ese mes \footnote{Ver los parámetros de los 12 perfiles mensuales en el apéndice B.}.\\
-
-\begin{figure}[htb!]
-\centering
-\includegraphics[width=0.9\textwidth]{Figs/Algoritmo_mensuales.pdf}
-\caption[Secuencia lógica para obtener los perfiles mensuales usando GDASTOOL.]{Secuencia lógica utilizada para extraer y construir los 12 perfiles mensuales para la ciudad de Bucaramanga.}
- \label{fig:fig14}
- \end{figure}
-\begin{figure}[htb!]
-\centering
-\includegraphics[width=0.8\textwidth]{Figs/promedio_enero2.pdf}
-\caption[Promedio de la densidad atmosférica para la ciudad de Bucaramanga en enero.]{La figura muestra 62 perfiles de densidad para el mes de enero en Bucaramanga (líneas amarillas) y el promedio para ese mes (línea roja). Las líneas amarillas corresponden a los perfiles atmosféricos obtenidos en dos horas del día diferentes: 0:00 y las 12:00 UTC-5 durante todos los días del mes de enero, en la ciudad de Bucaramanga (7.11 N, 73.11 E). Y la línea roja corresponde al promedio de los 62 perfiles.}
-\label{fig:fig15}
-\end{figure}
-
-%PÁRRAFO ADICIONAL DONDE HABLO SOBRE LA GRÁFICA DE PERFILES DIARIOS
-%DIFERENCIA: 24,122503353 ABRIL Y SUBTROPICAL
-De estos perfiles diarios se comienzan a observar discrepancias que se incrementan a medida que aumenta la altitud. Luego de los 100 km estas diferencias caen a cero, puesto que todos los perfiles atmosféricos tienen los mismos parámetros para esta última capa. En consecuencia, ¿Podrían observarse diferencias suficientes para justificar la creación y uso de perfiles atmosféricos mensuales, incluso en climas tropicales como el de Bucaramanga? Para dar respuesta, es necesario en primera instancia comparar los perfiles de densidad de cada uno de los meses, con los perfiles comúnmente usados para esta cuidad: el perfil Tropical y Subtropical. \\
-
-Un contraste entre los promedios mensuales creados con GDAS, con los perfiles atmosféricos predeterminados en CORSIKA, se puede observar en la figura \ref{fig:fig16}. A la izquierda se observan todos los perfiles de densidad en los primeros 30 km. Allí, los perfiles atmosféricos subtropical y tropical se encuentran cercanos entre sí y a su vez alejados de los perfiles mensuales. Para cuantificar esta diferencia, la gráfica de la derecha muestra la diferencia entre los perfiles mensuales construidos versus el perfil subtropical. Se observa una diferencia notable que se incrementa rápidamente en los primeros 4 km hasta llegar a los 250 $g/cm^{2}$. Esto corresponde a un 58$\%$ de diferencia. Luego esta diferencia  disminuye, pero se mantiene por encima del 40$\%$.
-\begin{figure}[htb!]
-\includegraphics[width=0.4\paperwidth]{Figs/perfiles_mensuales.pdf}
-\includegraphics[width=0.4\paperwidth]{Figs/diferencias.pdf}
-\caption[Promedios mensuales vs perfiles tropical y subtropical de CORSIKA.]{Contraste entre los promedios mensuales creados con GDAS, con los perfiles atmosféricos tropical y subtropical predeterminados en CORSIKA. A la izquierda se observan los perfiles de densidad para los primeros 30 km. A la derecha se observa la diferencia entre los perfiles mensuales construidos y el perfil subtropical de CORSIKA usado comúnmente para Bucaramanga. Se observa una diferencia notable que se incrementa rápidamente en los primeros 4 km hasta llegar a los 250 $g/cm^{2}$. Esto corresponde a un 58$\%$ de diferencia. Luego esta diferencia  disminuye, pero se mantiene por encima del 40$\%$.}
-\label{fig:fig16}
-\end{figure}
-
-\newpage 
-\section{Validaci\'on de los perfiles para la atm\'osfera de Malarg\"ue}\label{sec:ref2}
-
-En virtud de validar la metodología implementada para la creación de perfiles atmosféricos, es necesario comprobar que los datos y aproximaciones realizadas, reproducen adecuadamente el comportamiento de la atmósfera. Esto debe realizarse para una localización previamente caracterizada, donde también se usen perfiles mensuales en base a GDAS.\\
-
-La localización seleccionada es el Observatorio Pierre Auger, quien reemplazó los perfiles basados en mediciones con radiosondas, por perfiles atmosféricos mensuales basados en GDAS. Estos perfiles fueron construidos para la cuidad de Malarg\"ue - Argentina. Teniendo en cuenta que GDAS proporciona información diaria desde junio del 2005 hasta la fecha, este observatorio extrajo datos para dos horas del día diferentes, en todos los días disponibles, recolectando 17416 perfiles atmosféricos con los que se construyeron los promedios mensuales  \citep{GAP_2011NEW}. Las diferencias que arrojan los perfiles de GDAS con datos no superaron $1 g/cm^{2}$ como se observa en la figura \ref{fig:fig17}.\\
-
-\begin{figure}[htb!]
-\centering
-\includegraphics[width=0.7\textwidth]{Figs/nMMMvsGDAS.png}
-\caption[Diferencias entre datos de radiosonda y GDAS en función de la altura.]{Diferencias entre datos de radiosonda tomados sobre Malarg\"ue  \citep{GDAS_Auger}, con los perfiles mensuales de GDAS (puntos negros) y los perfiles mensuales promedios basados en datos de radiosonda (puntos rojos) en función la altura. Para el Observatorio Pierre Auger. Las diferencias que arrojan los perfiles de GDAS con datos no superaron $1 g/cm^{2}$ como se observa en la figura \ref{fig:fig17}.}
- \label{fig:fig17}
- \end{figure}
-
-Para realizar la validación, se construyó un perfil atmosférico para el mes de abril, entre los años 2006 y 2011, extrayendo 10 perfiles mensuales cada año en los días 6, 12, 18, 24 y 30 a las 0:00 y las 12:00 horas cada día para Malarg\"ue, usando la metodología descrita en la sección 2.3. Seguidamente, se corroboró el desarrollo de una EAS usando los dos medios de interacción, uno a la vez: la atmósfera reconstruida, y el perfil robusto de Pierre Auger. Para esto, se realizaron 100 simulaciones de un núcleo de Hierro de $1 \cdot 10^{8}$ GeV. Esta elección se hizo teniendo en cuenta que este valor de energía está en el rango de máxima eficiencia del Observatorio. \\
-
-A partir de la figura \ref{fig:fig18} se puede observar la distribución longitudinal de partículas secundarias producto de la interacción, luego de promediar las 100 EAS bajo las mismas condiciones iniciales. Se observa que el modelo reconstruido reproduce el resultado arrojado por las atmósferas mensuales estándar de Malarg\"ue construidas con GDAS, con una diferencia porcentual por debajo del 20$\%$ después de los 400 $g/cm^{2}$. Además el comportamiento de la EAS que se obtiene con la atmósfera reconstruida muestra una diferencia de $\approx$ 2$\%$ en el valor del $X{max}$.\\
-
-Estos resultados muestran que el método utilizado para la creación de perfiles puede reproducir las condiciones atmosféricas reales tal como lo demostró el Observatorio Pierre Auger  \citep{GDAS_Auger}. Con esto se valida la metodología implementada y los códigos utilizados,  y se procede a realizar estimaciones del flujo de secundarios con los perfiles construidos.\\
-
-  \begin{figure}[htb!]
-\centering
-\includegraphics[width=0.8\textwidth]{Figs/longi_1E8_malargue.pdf}
-\caption[Distribución longitudinal de secundarios sobre Malarg\"ue.]{Arriba, Distribución longitudinal de partículas secundarias producto de la interacción de 1 núcleo de Hierro de $1\cdot 10^{8}$ GeV sobre la atmósfera de Malargue para abril, construida por el Observatorio Pierre Auger (Verde) y la atmósfera de Malargue en abril construida mediante la metodología implementada para este trabajo (Azul). Abajo, diferencia porcentual entre las dos distribuciones longitudinales, considerando las partículas cargadas (morado) y sólo los muones (celeste). Las simulaciones consideran el mismo campo magnético y altura sobre el nivel del mar.}
- \label{fig:fig18}
- \end{figure}\\
+Los modos scaler e histograma están fuertemente relacionados puesto que la integral del histograma de carga, por construcción, representa el número de señales registradas en ese minuto. Ajustando adecuadamente los límites de esta integración, teóricamente debería ser posible recuperar las tasas de los Scalers de ese detector. 

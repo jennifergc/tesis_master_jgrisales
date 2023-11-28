@@ -22,6 +22,7 @@
 \documentclass[letter,oneside,12pt,spanish]{report}          % Encabezados
 % ------------------------------------------------------------------------
 \usepackage{uislatexstyleAPA}                           % Libreria UIS APA
+%------------------------------
 % ------------------------------------------------------------------------
 % Ingrese en este punto las librerías específicas de usuario
 % ------------------------------------------------------------------------
@@ -29,8 +30,21 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{subfigure}
+%Image-related packages
+\usepackage{graphicx}
+%\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{comment}
+\usepackage{pdflscape}
+\usepackage{booktabs}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{siunitx}
+
 % ------------------------- NUEVO-----------------------------------------------
-\bibliography{xbib.bib}
+\bibliography{bib_jgrisales.bib}
 % ------------------------------------------------------------------------
 \begin{document}                                     % Inicio de documento
 % ------------------------------------------------------------------------
@@ -40,50 +54,51 @@
 % ------------------------------------------------------------------------
 % Titulo resumido del trabajo que aparecerá en cornisa
 % ------------------------------------------------------------------------
-\title{Caracterización de perfiles atmosféricos para la colaboración LAGO}
+%\title{Estudio de los efectos de la actividad solar a largo plazo sobre el flujo de rayos cósmicos secundarios en el observatorio Pierre Auger.}
+\title{}
 % ------------------------------------------------------------------------
 % Elementos previos al contenido del trabajo
 % ------------------------------------------------------------------------
-\include{Secs/P0}             % Portadilla, formato de nota y autorización
+\include{Prelim/P0}             % Portadilla, formato de nota y autorización
 % ------------------------------------------------------------------------
-\include{Secs/Dedicatoria}                                   % Dedicatoria
+%\include{Secs/Dedicatoria}                                   % Dedicatoria
 % ------------------------------------------------------------------------
-\include{Secs/Agradecimientos}                           % Agradecimientos
+%\include{Secs/Agradecimientos}                           % Agradecimientos
 % ------------------------------------------------------------------------
 \tableofcontents                                      % Tabla de contenido
 % ------------------------------------------------------------------------
-\listoffigures                         % Lista de figuras, tablas y anexos
-\listoftables
-\listofanexo
+%\listoffigures                         % Lista de figuras, tablas y anexos
+%\listoftables
+%\listofanexo
 % ------------------------------------------------------------------------
 %\include{Secs/glosario}                             % Glosario de términos
 % ------------------------------------------------------------------------
 % Contenido del Informe
 % ------------------------------------------------------------------------
-\include{Secs/resumen}                                               % Resumen
-\include{Secs/Abstract}                                              % Abstract
+\include{Prelim/resumen}                                               % Resumen
+%\include{Secs/Abstract}                                              % Abstract
 % ------------------------------------------------------------------------
 % Capítulos
 % ------------------------------------------------------------------------
-\include{Secs/intro}   % Introducción
-%\include{Secs/T1}   % Objetivos
+\include{Prelim/intro}   % Introducción
+\include{Prelim/Objtivos}   % Objetivos
 \include{Secs/chapter_1}  
 \include{Secs/chapter_2} 
-\include{Secs/chapter_3}   
+\include{Secs/chapter_3}
 \include{Secs/Conclusiones}   % Conclusiones
 % ------------------------------------------------------------------------
 % Bibliografía
 % ------------------------------------------------------------------------
-\addcontentsline{toc}{chapter}{Referencias Bibliográficas}\newpage
-\noindent
+\addcontentsline{toc}{chapter}{Referencias Bibliográficas}\newpage %%% JENN REMOVIDO
+%\noindent
 %\bibliographystyle{apalike}
-\printbibliography
+\printbibliography %%% JENN REMOVIDO
 % ------------------------------------------------------------------------
 % Anexos
 % ------------------------------------------------------------------------
-\include{Secs/APENDICE_A}   
-\include{Secs/APENDICE_B}   
-\include{Secs/APENDICE_C}
+\include{Secs/Anexo1}   
+%\include{Secs/APENDICE_B}   
+%\include{Secs/APENDICE_C}
 % ------------------------------------------------------------------------
 \end{document}                                          % Fin de documento
 % ------------------------------------------------------------------------ 

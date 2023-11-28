@@ -27,14 +27,40 @@
 \usepackage[linktoc=all]{hyperref}
 \usepackage{url}
 % ------------------------------------------------------------------------
-\usepackage[symbol]{footmisc}
+\usepackage[symbol,hang,flushmargin]{footmisc}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 % ------------------------------------------------------------------------
+% Librería para reconocimiento de ñ y acentos del español
+% ------------------------------------------------------------------------
+%\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\DeclareUnicodeCharacter{00B5}{\ensuremath{\mu}}
+\DeclareUnicodeCharacter{00B0}{\textdegree} % Declara el carácter Unicode ° como \textdegree
+
+\usepackage{lmodern}
+
+\usepackage{csquotes}
+\usepackage[spanish,es-tabla]{babel}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[utf8]{inputenc}
+%\usepackage{lmodern}
+%\usepackage{csquotes}
+%\usepackage[spanish,es-tabla]{babel}
+%\usepackage[T1]{fontenc}
+%\usepackage[ansinew]{inputenc}CAMBIADO
+%\usepackage[spanish,es-nodecimaldot]{babel}CAMBIADO
+% ------------------------------------------------------------------------
+
 % Librería para definir estilo de bibliografía
 % ------------------------------------------------------------------------
 %\usepackage[style=authoryear]{biblatex}
 %\usepackage{biblatex}
-\usepackage[backend=biber,style=apa,citestyle=authoryear,natbib=true,backend=bibtex]{biblatex}
+%\usepackage[backend=biber,style=apa,citestyle=authoryear,natbib=true,backend=bibtex]{biblatex}
+%\usepackage[style=apa,citestyle=authoryear,natbib=true,backend=biber]{biblatex}
+\usepackage[backend=biber,style=apa,citestyle=authoryear,natbib=true]{biblatex}
+
+%\usepackage[style=apa, backend=biber]{biblatex}
 %\usepackage{natbib}
 %\usepackage{apacite}
 %\usepackage[citestyle=alphabetic,bibstyle=authortitle]{biblatex}
@@ -49,22 +75,7 @@
 % ------------------------------------------------------------------------
 \usepackage{titletoc}
 \usepackage[subfigure]{tocloft}
-% ------------------------------------------------------------------------
-% Librería para reconocimiento de ñ y acentos del español
-% ------------------------------------------------------------------------
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
 
-\usepackage{csquotes}
-\usepackage[spanish,es-tabla]{babel}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage[utf8]{inputenc}
-%\usepackage{lmodern}
-%\usepackage{csquotes}
-%\usepackage[spanish,es-tabla]{babel}
-%\usepackage[T1]{fontenc}
-%\usepackage[ansinew]{inputenc}CAMBIADO
-%\usepackage[spanish,es-nodecimaldot]{babel}CAMBIADO
 % ------------------------------------------------------------------------
 % Librería para alteración de contador de objetos en capítulos
 % ------------------------------------------------------------------------
@@ -72,7 +83,7 @@
 % ------------------------------------------------------------------------
 % Librería para eliminar sangría de nota al pie
 % ------------------------------------------------------------------------
-\usepackage[hang,flushmargin]{footmisc}
+%\usepackage[hang,flushmargin]{footmisc}
 % ------------------------------------------------------------------------
 % Librería para nombres en listas y configuración de alineación izquierda
 % y un solo punto antes de la descripción
@@ -88,6 +99,7 @@
 % ------------------------------------------------------------------------
 % Definición para cornisa
 % ------------------------------------------------------------------------
+\setlength{\headheight}{14.5pt} % Ajusta el valor según tus necesidades
 \usepackage{fancyhdr}
 \fancypagestyle{plain}
 {
@@ -113,7 +125,7 @@
 % ------------------------------------------------------------------------
 % Configuración para pies de página
 % ------------------------------------------------------------------------
-\usepackage[hang]{footmisc}
+%\usepackage[hang]{footmisc}
 \setlength{\footnotemargin}{1.5em}
 \setlength{\skip\footins}{1\baselineskip}
 \setlength{\footnotesep}{\skip\footins}
