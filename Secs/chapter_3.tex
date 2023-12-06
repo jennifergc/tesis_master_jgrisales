@@ -156,64 +156,62 @@ Esta comparación se ha realizado considerando que cada dataset, aún corregido 
 %Verificar cómo hablo de las ICME en el capítulo 1
 Una ICME (Eyección de Masa Coronal Interplanetaria) es una gran expulsión de plasma y campo magnético del Sol que se propaga a través del espacio interplanetario. Estas ICMEs pueden influir significativamente en el transporte de los Rayos Cósmicos Galácticos (GCRs) y tienen efectos tanto a nivel local como global en la densidad de GCRs (\cite{Davies_2023}). Estos efectos están relacionados con cambios significativos en las características locales de la turbulencia en el medio interplanetario, así como la presencia de estructuras con líneas de campo magnético suaves e intensas en las nubes que alteran la configuración del viento solar (\cite{Krittinatham_2009}) (Ver capítulo 1).
 
-La Figura \ref{fig:ICME_scaler} realizada en un trabajo previo por \cite{masias_2017}, muestra los perfiles superpuestos de los flujos de GCR para diferentes energías en el Observatorio Pierre Auger durante el paso de una ICME. Se observa un aumento en la magnitud del campo magnético interplanetario B, y las fluctuaciones magnéticas rmsB alcanzan su valor máximo en el choque. Las gráficas muestran las desviaciones normalizadas del flujo de scaler, y las dos bandas de histograma. En los datos de scaler se observa una disminución de hasta el −0.3\% a la que le sigue una recuperación similar al efecto observado con los detectores de neutrones. Estos mismos efectos son observados con los modos histograma $H_{sc}$ y $H_{\mu}$ con diferente intensidad llegando a ser hasta de −0.4\%.
+La Figura \ref{fig:ICME_scaler} realizada en un trabajo previo para Pierre Auger (\cite{masias_2017}), muestra los perfiles superpuestos de los flujos de GCR para diferentes energías en el Observatorio Pierre Auger durante el paso de una ICME. Se observa un aumento en la magnitud del campo magnético interplanetario B, y las fluctuaciones magnéticas rmsB alcanzan su valor máximo en el choque. Las gráficas muestran las desviaciones normalizadas del flujo de scaler, y las dos bandas de histograma. En los datos de scaler se observa una disminución de hasta el −0.3\% a la que le sigue una recuperación similar al efecto observado con los detectores de neutrones. Estos mismos efectos son observados con los modos histograma $H_{sc}$ y $H_{\mu}$ con diferente intensidad llegando a ser hasta de −0.4\%.
 
-Así, durante los periodos de alta actividad solar donde las ICMEs son más frecuentes, van a causar variaciones significativas en los datos del observatorio. Por otro lado, durante los periodos de baja actividad solar, las ICMEs al ser menos frecuentes, mantendrá más estable los datos del observatorio.
-
-%%%%%%%%%%% NEWWW
-
-
+Así, durante los periodos de alta actividad solar donde las ICMEs son más frecuentes, van a causar variaciones significativas en los datos del observatorio. Por otro lado, durante los periodos de baja actividad solar, las ICMEs al ser menos frecuentes, y se mantendrán más estables los datos del observatorio.
 \begin{figure}
 \centering
     \includegraphics[width=0.7\linewidth]{Figs/ICME_scaler.png}
-    \caption{Perfiles superpuestos de los flujos para diferentes energías en el observatorio Pierre Auger en los modos de detección histograma y scaler durante el paso de una ICME en el periodo de funcionamiento del observatorio: La gráfica \textit{a)} muestra un aumento en la magnitud del campo magnético interplanetario B, y la \textit{b)} muestra las fluctuaciones magnéticas rmsB que alcanzan su valor pico en el choque. La gráfica \textit{c)}, \textit{d)} y \textit{e)} muestran las desviaciones normalizadas del flujo de scaler, y las dos bandas de histograma.}
+    \caption{Perfiles superpuestos de los flujos para diferentes energías en el observatorio Pierre Auger en los modos de detección histograma y scaler durante el paso de una ICME en el periodo de funcionamiento del observatorio: La gráfica \textit{a)} muestra un aumento en la magnitud del campo magnético interplanetario B, y la \textit{b)} muestra las fluctuaciones magnéticas rmsB que alcanzan su valor pico en el choque. La gráfica \textit{c)}, \textit{d)} y \textit{e)} muestran las desviaciones normalizadas del flujo de scaler, y las dos bandas de histograma. Fuente: (\cite{masias_2017})}
     \label{fig:ICME_scaler}
 \end{figure}
-
-
-
 \subsection{Efectos de la periodicidad solar en el fondo de RC medido}
 
 %%%%%%%%%%%  FOURIER DE AUGER Y el NM que escogí
-La anterior afirmación puede verse reflejada en la figura \ref{fig:CRIvsSN} donde se ilustra  las distribuciones y tendencias de SSN (Número de Manchas Solares), CRI (Íntensidad de Rayos Cósmicos) y SWS (Velocidad del Viento Solar). La resolución de cada una de estas series de tiempo es de 1 día, y en el caso de la tasa de scaler que es un indicador de la intensidad o flujo de rayos cósmicos secundarios, cuya resolución original es de 300s, hemos realizado un remuestreo a partir del promedio diario. Las tendencias se determinaron utilizando una media móvil de 15 días. Se observa una aparente anticorrelación entre el CRI y SSN. Las tendencias revelan claramente las variaciones a largo plazo en respuesta al SSN. El CRI muestra una periodicidad similar al ciclo solar de 11 años, mientras que el SSN muestra modulaciones irregulares en respuesta a las actividades solares. Sin embargo a simple vista no se observa a largo plazo una correlación con la velocidad del viento solar.
+La anterior afirmación puede verse reflejada en la figura \ref{fig:CRIvsSN} donde se ilustran  las distribuciones y tendencias de la intensidad de rayos cósmicos medido, el número de manchas solares (SSN), y la velocidad del viento solar (SWS). La resolución de cada una de estas series de tiempo es de 1 día, y en el caso de la tasa de scaler (medida de la intensidad o flujo de rayos cósmicos secundarios) cuya resolución original es de 300s, hemos realizado un remuestreo a partir del promedio de todos los datos a lo largo de un día, esta técnica la usaremos convenientemente dependiendo de la escala de tiempo en la que nos enfoquemos. Las tendencias (líneas rojas) se determinaron utilizando una media móvil de 15 días (\cite{Oloketuyi_2020}). 
 
-El comportamiento en el CRI podría deberse a la variabilidad de la amplitud del campo magnético heliosférico en el máximo solar, que reduce la afluencia de rayos cósmicos galácticos que entran en el sistema solar, y viceversa en el mínimo solar debido a la baja actividad magnética solar (\cite{Oloketuyi_2020}). Esto indica que el CRI es abundante fuera de la heliosfera, pero su influencia y modulaciones en la heliosfera dependen exclusivamente de las actividades solares.
-
+La media móvil es una técnica estadística que usaremos también a lo largo de este estudio, se utiliza con frecuencia para analizar tendencias y suavizar datos. Esta técnica se basa en el Teorema del Límite Central (\cite{Davies_2023}), y consiste en calcular la media de los últimos N valores observados en una serie temporal para minimizar el ruido y mantener una representación precisa de la señal. Los datos, denotados como x(t), pueden considerarse dentro de un marco temporal específico, conocido como ventana deslizante lo que facilita la identificación de las tendencias subyacentes (\cite{wang_2019}). Se puede representar como:
+$$
+MMS_i = \frac{1}{k} \sum_{j=0}^{k-1} x_{i-j}
+$$
+De esta forma se suman los $k$ valores más recientes de la serie de tiempo (desde $x_i$ hasta $x_{i-k+1}$), y luego se divide por $k$ para obtener el promedio. Si hay menos de $k$ observaciones disponibles (por ejemplo, al principio de la serie de tiempo), se calcula la media de las observaciones disponibles. Esto significa que si solo tienes $m$ observaciones y $m < k$, la MMS se calcula como:
+$$
+MMS_i = \frac{1}{m} \sum_{j=0}^{m-1} x_{i-j}
+$$
+La ventana que escogimos para mostrar la tendencia busca evitar el retardo que se genera en la señal. A partir de la gráfica, , se observa a simple vista una aparente anticorrelación entre la intensidad de rayos cósmicos y el número de manchas solares. Las tendencias revelan claramente las variaciones a largo plazo en respuesta a la actividad solar. Sin embargo no se observa a largo plazo una correlación con la velocidad del viento solar.
+%El comportamiento en la CRI podría deberse a la variabilidad de la amplitud del campo magnético heliosférico en el máximo solar, que reduce la afluencia de rayos cósmicos galácticos que entran en el sistema solar, y viceversa en el mínimo solar debido a la baja actividad magnética solar (\cite{Oloketuyi_2020}). Esto indica que el CRI es abundante fuera de la heliosfera, pero su influencia y modulaciones en la heliosfera dependen exclusivamente de las actividades solares.
+%cuyo análisis se propone en el trabajo de Oloketuyi y colaboradores
 \begin{figure}
     \includegraphics[width=1.1\linewidth]{Figs/Figr/CRI_SN_SW_over.png}
-    \caption{Distribuciones y tendencias de SSN (Número de Manchas Solares), CRI (Intensidad de Rayos Cósmicos) y SWS (Velocidad del Viento Solar). Las tendencias se determinaron utilizando una media móvil de 90 días. Se observa una aparente anticorrelación entre el CRI y SSN. Eaboración propia.}
+    \caption{Distribuciones y tendencias de SSN (Número de Manchas Solares), CRI (Intensidad de Rayos Cósmicos) y SWS (Velocidad del Viento Solar). Las tendencias se determinaron utilizando una media móvil de 10 días. Se observa una aparente anticorrelación entre el CRI y SSN. Elaboración propia.}
     \label{fig:CRIvsSN}
 \end{figure}
-Para verificar la aparente relación entre el CRI y las manchas solares, en la figura \ref{fig:sunspots_corr} se presenta los análisis de correlación cruzada entre el Número de Manchas Solares (SSN) diario y el Índice de Rayos Cósmicos (CRI) y la Velocidad del Viento Solar (SWS) (\cite{Oloketuyi_2020}) para los datos del Observatorio Pierre Auger y para las estaciones de neutrones Oulu y México. Se escogen estas dos estaciones debido a que Oulu sirve como referencia para la validación de los análisis respecto a otros trabajos, y méxico por su similitud en el valor de la rigidez de corte geomagnético.
+Para cuantificar estas observaciones, en la figura \ref{fig:sunspots_corr} se representan los análisis de correlación cruzada entre la Intensidad de Rayos Cósmicos (CRI) el Número de Manchas Solares (SSN) con el  y la Velocidad del Viento Solar (SWS) para los datos del Observatorio Pierre Auger y para las estaciones de neutrones Oulu y Tsumeb. Se escogen estas dos estaciones debido a que Oulu sirve como referencia para la validación de los análisis respecto a otros trabajos (\cite{Oloketuyi_2020}), y Tsumeb por su similitud en el valor de la rigidez de corte geomagnético (\ref{NMs}).
 
 %%%% correlación cruzada
-Para calcular la correlación usaremos el método de correlación de Pearson, esta medida estadística evalúa la relación lineal entre dos variables continuas a partir de la obtención de un valor entre 0 y 1. Cuando el coeficiente es cercano a 1, indica una fuerte correlación positiva, es decir, cuando una variable aumenta, la otra también lo hace. Un coeficiente cercano a -1 indica una fuerte correlación negativa, lo que significa que cuando una variable aumenta, la otra disminuye:
+Para calcular la correlación usaremos el método de correlación de Pearson, esta medida estadística evalúa la relación lineal entre dos variables continuas a partir de la obtención de un valor entre 0 y 1. Cuando el coeficiente es cercano a 1, indica una fuerte correlación positiva, es decir, cuando una variable aumenta, la otra también lo hace (\cite{Davies_2023}). Un coeficiente cercano a -1 indica una fuerte correlación negativa, lo que significa que cuando una variable aumenta, la otra disminuye:
 $$ r_{xy} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum_{i=1}^{n} (x_i - \bar{x})^2 \sum_{i=1}^{n} (y_i - \bar{y})^2}} $$
 Donde:
 - $x_i$ e $y_i$ son los valores individuales de las series $x$ e $y$ respectivamente.
 - $\bar{x}$ y $\bar{y}$ son los promedios de las series $x$ e $y$ respectivamente.
 - $n$ es el número de observaciones en cada serie.
 
-Este coeficientes es actualmente una medida estándar en estadística porque es de fácil interpretación, y se ha usado en trabajos anteriores de fondo de rayos cósmicos (\cite{Usoskin_2005}, \cite{Oloketuyi_2020},\cite{Mendonça_2019},\cite{Davies_2023}).
-
+Este coeficientes es actualmente una medida estándar en estadística por su fácil interpretación, y se ha usado en trabajos precedentes donde también exploran el fondo de rayos cósmicos (\cite{Usoskin_2005}, \cite{Oloketuyi_2020},\cite{Mendonça_2019},\cite{Davies_2023}).
 %%% MEJORAR ESTA PARTE CON LA GRÁFICA DE SOLAR WIND
 %%%%%
 %%%%%%%%%
 %%%%%%%%%%%%%%
-
-El eje x de cada gráfico representa el desfase temporal en relación con el SSN y SW. El signo indica desplazamientos hacia adelante y hacia atrás, y el valor cero corresponde a la ausencia de desfase. Se observa que el CRI muestra una fuerte correlación negativa con el SSN para el ciclo solar 24, pero no se observa correlación significativa con el viento solar. Los picos positivos con valores de 0.38 y 0.57 se ajustan a una correlación positiva en $\approx$5 años, y los tres picos negativos, corresponden a una anticorrelación de 0.55 y 0.58 para un periodo de $\approx$ 8 a 9 años.
-%Arreglar para tener la gráfica de correlación con el viento solar.
-%Hacer la gráfica comparando el mismo intervalo de tiempo con la estación de neutrones Oulu y México
 \begin{figure}
-\centering
-    \includegraphics[width=0.7\linewidth]{Figs/Figr/CRI_SN_crosscorr.pdf}
+%\centering
+    \includegraphics[width=1.0\linewidth]{Figs/Figr/09_cross_correlation.pdf}
     \caption{Análisis de correlación cruzada entre el Número de Manchas Solares (SSN) diario y el Índice de Rayos Cósmicos (CRI) y la Velocidad del Viento Solar (SWS) diarios usando el análisis de correlación cruzada usado en (\cite{Oloketuyi_2020}). El eje x de cada gráfico representa el desfase temporal en relación con el SSN. Los valores negativos indican desplazamientos hacia atrás, mientras que los positivos indican lo contrario, y el valor cero corresponde a la ausencia de desfase. Se observa que el CRI muestra una fuerte correlación negativa con el SSN para el ciclo solar 24. Elaboración propia}
     \label{fig:sunspots_corr}
 \end{figure}
+El eje x de cada gráfico representa el desfase temporal en relación con el SSN y SW. El signo indica desplazamientos hacia adelante y hacia atrás, y el valor cero corresponde a la ausencia de desfase. Se observa que el CRI muestra una correlación negativa moderada con el SSN para el ciclo solar 24 en Auger y las estaciones de neutrones (entre $0.30$ y $0.50$), y se observa una correlación débil (entre $0.10$ y $0.29$) con el viento solar. Los picos positivos para Auger con valores de 0.30 y 0.48 se ajustan a una correlación moderada positiva en $\approx$5 años, y los tres picos negativos, corresponden a una anticorrelación de 0.45 y 0.58 para un periodo de $\approx$ 8 a 9 años.
+%Arreglar para tener la gráfica de correlación con el viento solar.
+%Hacer la gráfica comparando el mismo intervalo de tiempo con la estación de neutrones Oulu y México
 Es posible cuantificar entonces la sensibilidad del observatorio ante el ciclo solar 24, pero la escala que estamos utilizando nos impide ver los posibles efectos de las otras periodicidades en los datos por ejemplo, $( \thicksim 1, \thicksim13.5,\thicksim27, \thicksim186, \thicksim365$ d). Esto es posible mediante un análisis espectral. Para este trabajo usaremos el método de Blackman-Tukey (\cite{blackman}) aplicado en (\cite{noelia_2023}). El método de Blackman-Tukey es un poderoso enfoque no paramétrico para estimar la \textit{densidad espectral de potencia (PDS)} de series temporales. Éste método produce más del doble de estimaciones de la densidad espectral que la técnica FFT, por lo que las estimaciones B-T tienen una mayor resolución para el mismo coeficiente de variación (\cite{edge_1970}). 
-
 %Este método se basa en el teorema de Wiener-Khinchin, que establece que se puede obtener el espectro de potencia de una serie de tiempo calculando primero su función de autocorrelación y luego aplicando la transformada de Fourier a la función de autocorrelación.
-
 \textbf{Densidad espectral de potencia (PSD):}
 
 La PSD es la medida que especifica los niveles de potencia de los componentes de frecuencia presentes en una señal, así se puede determinar el rango de potencia sobre el cual las frecuencias de la señal están operando. A partir del teorema de Wiener-Khinchin, se define como la transformada de Fourier de la la función de autocorrelación de una señal. Cuando se presenta un proceso aleatorio, la transformada de Fourier no puede ser aplicada directamente debido a que la mayoría de las realizaciones tienen formas irregulares y no pueden presentarse analíticamente (\cite{HerreraSepulveda_2017}). En estos casos solución para este inconveniente es entonces la aplicación de la función de autocorrelación . Esta función se define como el valor esperado de las variables aleatorias del proceso en los instantes de tiempo $t_1$ y $t_2$:
@@ -229,26 +227,23 @@ Ahora bien, la densidad espectral de potencia PSD está dada por:
    S_{xx}(\omega) = \int_{-\infty}^{\infty} R_{xx}(\tau) e^{-j\omega\tau} d\tau
 \end{equation}
 Existen dos técnicas principales para estimar la Densidad Espectral de Potencia (DEP): el método paramétrico y el no paramétrico. El método paramétrico utiliza un modelo para el proceso aleatorio para estimar el espectro de potencia, incluyendo técnicas como el modelo de media móvil (MA), el modelo autoregresivo (AR) y el modelo autoregresivo de media móvil (ARMA). Por otro lado, el método no paramétrico estima primero la secuencia de autocorrelación de un conjunto de datos y luego estima el espectro de potencia a través de la Transformada de Fourier de la secuencia de autocorrelación estimada, utilizando técnicas como el periodograma, el método de Barlett, el método de Welch y el método de Blackman-Tukey (\cite{HerreraSepulveda_2017}).
-
-
-
 \begin{comment}
     Suponiendo que tras las correcciones por presión y temperatura no haya más variables atmosféricas que afecten a la tasa de recuento, un análisis espectral proporcionará periodicidades relacionadas con los efectos heliosféricos. Existen varias técnicas para realizar una estimación de la densidad espectral de potencia (PDS). Entre los métodos no paramétricos se encuentra el método de Blackman-Tukey (Blackman & Tukey, 1958). Este método se basa en el hecho de que la transformada de Fourier de una función de autocorrelación de una serie temporal es equivalente a su espectro de potencia. Ponderar la función de autocorrelación según diversas formas es un método tradicional para reducir una fuga de potencia. Estimamos la PSD de la S 00 horaria aplicando el método de Blackman-Tukey y considerando la ventana de Hanning de un tamaño igual a 0,3 de la longitud de los datos. Para determinar la importancia de los picos espectrales, se ha empleado la generación de un espectro de ruido rojo. Los picos espectrales que tienen amplitudes superiores al intervalo de confianza del 95 % se distinguen estadísticamente del espectro de ruido rojo de fondo.
 \end{comment}
+La gráfica \ref{FFT} muestra la expansión discreta en serie de Fourier del flujo de CR medido en el observatorio en escala logarítmica. Los datos se reescalaron a tres horas de tal forma que la señal diurna pueda ser observada. Los picos más agudos en la potencia espectral son visibles para una señal con una componente diaria, mensual y anual que se pronuncian al realizar un suavizado de ventana móvil a la densidad espectral de potencia como se muestra en la gráfica de la derecha. 
 
-La gráfica \ref{FFT} Muestra la expansión discreta en serie de Fourier de las tasas escalares observadas en escala logarítmica. Los picos más agudos en la potencia espectral son visibles para una señal con una frecuencia de un día solar. Esta señal diurna es debida a la rotación de la Tierra en el viento solar magnetizado y ha sido observada con Auger anteriormente.
+La señal diurna está relacionada a la rotación de la Tierra, su interacción con el viento solar magnetizado y la anisotropía espacial del flujo de GCR. Esta fluctuación diaria está causada por un equilibrio entre la convección radial del viento solar hacia el exterior de los GCR y la difusión hacia el interior a lo largo del campo magnético interplanetario (IMF) (\cite{martin_ICRC} \cite{noelia_2023}). 
 
+La componente mensual con un periodo de 27 días está relacionada a la rotación de Carrington (\cite{martin_ICRC}) y es ocasionada por la combinación de la rotación solar con una distribución desigual de las zonas activas solares de larga duración, como las manchas solares, los agujeros coronales, las CME y las zonas de interacción corrotantes. Estos fenómenos generan condiciones electromagnéticas longitudinalmente asimétricas de la heliosfera durante una única revolución solar (\cite{grieder_2001}). El periodo rotacional, causado por la rotación diferencial solar, es de unos 25 días en la zona casi ecuatorial y de 38 días en los polos.
+
+La rotación de la Tierra alrededor del Sol, que influye en el flujo de GCR, es la causa principal de la fluctuación anual del periodo de 365,25 días en los datos scaler. El flujo de GCR disminuye en el afelio, cuando la Tierra está más lejos del Sol, y aumenta en el perihelio, cuando está más cerca del Sol. En esta investigación, este fenómeno no se estudió a profundidad pero las observaciones de esta modulación han sido reportadas en trabajos previos (\cite{grieder_2001}).
 \begin{figure}
 \centering
-\includegraphics[width=0.8\linewidth]{Figs/Figr/fft_period.png}
+\includegraphics[width=1\linewidth]{Figs/Figr/12_PSD_total.pdf}
     \caption{Pendiente modificar con Autocorrelación para eliminar el ruido.}
-    \label{FFT}
+    \label{FFT1}
 \end{figure}
-
-
-
-
-\subsection{Sensibilidad a eventos transitorios}
+\subsection{Sensibilidad a eventos transitorios y de corto plazo}
 %%%%% BÚSQUEDA DE FORBUSH
 La resolución temporal de la tasa de scaler de 300s puede utilizarse para la búsqueda de eventos transitorios como los Forbush Decrease cuya presencia en los datos del Observatorio ya ha sido reportada. El presente trabajo no busca identificar los eventos, sino caracterizar la sensibilidad del Observatorio ante FE (Eventos Forbush) de diferentes intensidades. Para ello, vamos a usar la información del catálogo de eventos Forbush y disturbios interplanetarios como se describe en la sección 3.1, en los periodos 2006 -2019 estableciendo criterios físicos para la selección de eventos significativos. La gráfica \ref{fig:FD_events} muestra todas las magnitudes de los FE registrados en la base de datos, clasificados por la fuente que lo ha generado. Se observa que la mayor cantidad de eventos son aquellos que no tienen una relación confirmada  con fenómenos solares transitorios (puntos azules). No obstante, estos FE tienen en su mayoría magnitudes muy bajas y no presentan un comportamiento fuertemente ligado al ciclo solar, como sí se observa en los eventos asociados a Ondas de Choque Interplanetario OCI y comienzos de tormentas súbitas SSC. Especialmente estos eventos son los que presentan una mayor magnitud.
 \begin{figure}
@@ -263,37 +258,74 @@ Se seleccionaron los FE que cumplieran con las siguientes características en la
     \item Alta confiabilidad en la asociación del FE con la fuente (Qs = 4 y 5).
 \end{itemize}
 En total son 148 FE que cumplen con estas características para el periodo de tiempo de funcionamiento del observatorio, la tabla (\ref{tabla_FE_Auger}) muestra la lista de eventos seleccionados con algunos parámetros de interés como la fecha y hora del evento solar con el que está asociado, el tipo de fuente y la magnitud.
-
-
-
 %%%%%%%%%%%%%%%%   TABLAAAAAAAAAAAA FORBUSHHHH
-
 %%%%%%%%%%%%%%%%
-
-La gráfica \ref{hist_FE} muestra el histograma de magnitudes para los FE en donde se observa que la mayor cantidad de eventos tiene magnitud por debajo de dos (en total el $60.14\%$). Revisemos ahora la ventana correspondiente al ciclo solar 24 y contrastemos la ocurrencia de FEs con la tasa de scaler. La gráfica \ref{fig:FD_scaler} muestra la magnitud normalizada de FD entre 2006 a 2021 a la vez junto con la tasa de scaler normalizada. La barra de color en la parte superior divide el eje x en 15 secciones correspondiente a cada año  y el color representa la candidad de DF registrados en cada año.
-
-Se observa  que la mayor cantidad de FD $55.41\%$ se encuentran en la zona de máxima actividad solar (2012-2015) en esta región, en esta región se encuentra el $71.20\%$ de los eventos con magnitud >2 en todo el periodo de registro del observatorio.
+La gráfica \ref{hist_FE} muestra un histograma que representa los eventos forbush  en relación a su magnitud, 
+que es la variación máxima de la densidad CR provocada. La magnitud (MagnM corregida por efectos magnetosféricos) será nuestro parámetro principal para este análisis puesto que se ha cuantificado la relación estadística entre la rigidez geomagnética y la magnitud de la FE (\cite{belov_2009}), a pesar de que esto sigue siendo a la fecha un problema que necesita seguir siendo estudiado y se aborda más recientemente por Wang y colaboradores  donde han definido la amplitud de un FD y la rigidez máxima afectada, valor para hasta el cual los efectos de los FE siguen siendo significativos (\cite{wang_2023}). En general, valores bajos de FE $(<1\%)$ suelen indicar condiciones geomagnéticas tranquilas e inestables y los masivos suelen seguir a tormentas magnéticas excepcionalmente grandes, como las ocurridas en agosto de 1972, julio de 1982 y octubre de 2003 (\cite{belov_2009}).  De las 16 tormentas magnéticas con un Kp máximo de 9, 13 tuvieron fluctuaciones de electrones superiores al $5\%$ después de ellas. En un periodo de 50 años, las tormentas geomagnéticas intensas siguieron a la mitad de las diez mayores fluctuaciones de electrones, mientras que las tormentas severas o fuertes siguieron a la otra mitad y este comportamiento que podemos asociar al ciclo solar de 11 años, se ve reflejado en la figura \ref{fig:FD_events}.
 \begin{figure}
-    \includegraphics[width=1\linewidth]{Figs/Figr/FD_Scaler_AUGER.png}
+    \includegraphics[width=1\linewidth]{Figs/Figr/CRI_FD_HISTOGRAMA.png}
+    \caption{Enter Caption}
+    \label{hist_FE}
+\end{figure}
+De igual forma observamos a través del histograma de la figura \ref{hist_FE} que la mayor cantidad de eventos tiene magnitud por debajo del ($2\%$). Este porcentaje representa el $60.14\%$ de del total de FE en la base de datos y el $58.39\%$ de los eventos en el periodo 2006-2021 manteniéndose la tendencia. Enfocándonos en la ventana correspondiende al periodo accesible para los datos del Observatorio, a través de la figura \ref{fig:FD_scaler} podemos visualizar la magnitud normalizada de FE entre 2006 a 2021 a la vez junto con la tasa de scaler normalizada. La barra de color en la parte superior divide el eje x en 15 secciones correspondiente a cada año  y el color representa el número de eventos registrados en cada año.
+%Se observa una relación estadística entre el grado de actividad geomagnética y la magnitud de la FE. Valores bajos de FE (<1%) suelen indicar condiciones geomagnéticas tranquilas e inestables. Por el contrario, los FE masivos suelen seguir a tormentas magnéticas excepcionalmente grandes, como demuestran las ocurridas en agosto de 1972, julio de 1982 y octubre de 2003. Trece de las dieciséis tormentas magnéticas con un Kp máximo = 9 tuvieron FEs >5% tras ellas. Por otra parte, las tormentas geomagnéticas intensas siguieron a la mitad de las diez mayores FE durante un periodo de 50 años, mientras que las tormentas severas o fuertes siguieron a la otra mitad.
+Según la gráfica la mayor cantidad de FE ($55.41\%$) se encuentran en la zona de máxima actividad solar (2012-2016) en esta región,  se encuentra el $71.20\%$ de los eventos con magnitud $>2\%$ respecto a todo el periodo de registro del observatorio sirviendo como validación respecto a las observaciones de Belov y colaboradores (\cite{belov_2009}).
+\begin{figure}
+    \includegraphics[width=1\linewidth]{Figs/Figr/FD_Scaler_AUGER.pdf}
     \caption{Enter Caption}
     \label{fig:FD_scaler}
 \end{figure}
 %ESTO VA ARRIBA EN LA PERIODICIDAD DIARIA
 %En el trabajo de \cite{martin_ICRC} realizado también para el Observatorio Pierre Auger se reporta un comportamiento
-Lo anterior confirma la hipotesis que asocia las irregularidades en los perfiles de scaler diarios en el periodo de tiempo de máxima actividad solar con una mayor tasa de FE.
+%Lo anterior confirma la hipótesis que asocia las irregularidades en los perfiles de scaler diarios en el periodo de tiempo de máxima actividad solar con una mayor tasa de FE.
+Veamos cómo se comportan los scaler a cortas escalas, más específicamente en el rango de la duración habitual de un FE (días). Para esto es importante resaltar que como se ha mostrado a lo largo de este capítulo, el flujo de fondo de RC es muy sensible a fluctuaciones de diferentes frecuencias causadas por la actividad solar y esto supone un desafío a la hora de aplicar técnicas de filtrado que eliminen el ruido. Identificar eventos transitorios implica caracterizar muy bien el ruido de la señal medida por el observatorio. En este caso el ruido no solo comprende las fluctuaciones aleatorias de la señal sino también las frecuencias asociadas a la modulación periódica a diferentes escalas causadas por el Sol. Sin embargo las técnicas de filtrado como la ventana móvil pueden ser útiles para suavizar la señal y hacer nuestra caracterización de Forbush.
 
-Veamos cómo se comportan los scaler a cortas escalas, en el rango de la duración habitual de un FE (
-días). El flujo de fondo de RC es muy sensible a fluctuaciones de diferentes frecuencias causadas por la actividad solar y esto supone un desafío a la hora de aplicar técnicas de filtrado que elimine ruido. Identificar eventos transitorios implica caracterizar muy bien el background de la señal medida por el observatorio. Sin embargo las técnicas de filtrado como la ventana móvil pueden ser útiles para sualizar la señar y hacer nuestra caracterización de forbush in situ. 
+Como primera aproximación, vamos a realizar un filtrado únicamente de la modulación diaria a partir del método de la ventana móvil. Este método es especialmente útil para eliminar el ruido de alta frecuencia de una señal (\cite{Davies_2023}). La figura \ref{1d_filter} muestra los datos disponibles para el tiempo de funcionamiento del Observatorio con una taza de muestreo de 300s contrastando las señales con y sin filtro. Adicionalmente mediante  la figura \ref{filter_result} podemos observar una escala mucho menor en la que se muestra un FE ocurrido el 22 de junio del 2015 de magnitud $9.6\%$. Este FE es el más intenso medido por el observatorio y es de especial interés ya que fue generado por la segunda mayor tormenta geomagnética del ciclo solar 24. 
 
-%ESCRIBIR TEORÍA DEL PROMEDIO MÓVIL
+Esta tormenta fue generada por dos llamaradas solares clase M el 21 de junio del 2015 dando lugar a una CME, que demoró unas 39,5 horas en llegar.  La rápida velocidad inicial de la CME, la desviación por los agujeros coronales y la consiguiente reducción de su velocidad hacia la Tierra contribuyeron a que llegara a la Tierra antes de lo esperado (\cite{golpsdwamy_2018}). Adicionalmente, este  y otros FE significativos fueron utilizados para hacer una diferenciación entre FE generados por IMCE o por Regiones de Interacción Corrotantes (CIRs por sus siglas en inglés), que son regiones de interacción que se forman entre corrientes de viento solar de alta velocidad y corrientes lentas, lo que lleva a campos magnéticos y plasmas comprimidos, estudio que contribuyó recientemente en la comprensión de la relación entre la magnitud de los FE y la rigidez de corte geomagnético reportado en (\cite{wang_2023}).
 
-Con la figura \ref{FD1} podemos observar un Forbush con magnitud 9.5 medido por los scaler con la señal sin filtrar y con la señal filtrada. El suavizado para eliminar la priodicidad diaria se realiza con la ventana móvil de un día. ¿Cuál es entonces la mínima sensibilidad que tiene el observatorio a estos eventos?
 
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{Figs/Figr/auger_filter_1D.png}
+    \caption{Pendiente modificar con Autocorrelación para eliminar el ruido.}
+    \label{1d_filter}
+\end{figure}
 %Para ello, vamos a remover periodicidad diaria de los datos que interfieren con la identificación de estos eventos
-
-
+%\ref{FD1} podemos observar un Forbush con magnitud 9.5 medido por los scaler con la señal sin filtrar y con la señal filtrada. El suavizado para eliminar la priodicidad diaria se realiza con la ventana móvil de un día. ¿Cuál es entonces la mínima sensibilidad que tiene el observatorio a estos eventos?
+\begin{figure}
+\centering
+\includegraphics[width=1.1\linewidth]{Figs/Figr/forbush_filter_1D_DIFERENCIA.pdf}
+    \caption{Pendiente modificar con Autocorrelación para eliminar el ruido.}
+    \label{filter_result}
+\end{figure}
 %%%%%%%%%% O HACEMOS UNA DONDE INTENTEMOS RESTAR LOS FORBUSH 
 %%%%%%%%%%% SERÍA MUCHO RETO
 %%%%%%%%%%%% CALCULAR LA AMPLITUD? NO SÉ
+Ahora bien, la figura \ref{filter_result} no solo muestra la comparación entre la señal original y la filtrada de este FE (izquierda)  sino también su diferencia (derecha). Con esta diferencia podemos observar la amplitud de la modulación diaria que está alrededor de las 20 cuentas/s y si a este residuo le calculamos la densidad espectral podremos ver con mayor detalle la zona de alta frecuencia de la tasa de scaler tal y como se muestra en la figura \ref{forbush_filter}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{Figs/Figr/forbush_difference_FFT.pdf}
+    \caption{Pendiente modificar con Autocorrelación para eliminar el ruido.}
+    \label{forbush_filter}
+    \end{figure}
+    En la gráfica podemos observar muy marcados la evidencia de tres armónicos principales en la señal, correspondientes a 24, 12 y 8h, la modulación de 24 horas como se mencionó en la sección anterior, está relacionada con la rotación de la Tierra. La modulación a 12 horas es llamada \textit{modulación semidiurna} (\cite{nicolson_1948}, \cite{grieder_2001}) también asociada a la interacción del campo geomagnético con el viento solar (\cite{singh_2015}, \cite{sarabhai_1953}) además se observan dos armónicos menos prominentes cerca a 4,8 y 6h que han sido también observados en  detectores de neutrones (\cite{shalaby_2022}). Los mecanismos de transporte que originan estas fluctuaciones siguen siendo un problema de estudio en la actualidad lo que permite que el Observatorio Pierre Auger pueda contribuir  gracias a la sensibilidad a las altas frecuencias, al estudio de estos fenómenos de corto plazo.
+
+Un análisis más detallado de esta periodicidad debe descomponer los armónicos de la señal diurna, la componente de 27 y 365 para construir el fondo para ser suprimido de la señal, para caracterizar de forma más precisa la amplitud de la variación en la CRI generada por los FE como se propone en el trabajo de O. Okike (2020). Sin embargo, es posible calcular una referencia en la amplitud de los Forbush y por ende su sensibilidad, a partir de la señal filtrada que tenemos y la aplicación del método manual, usado predominantemente en los estudios de FE (\cite{okike_2020}). 
+
+El método manual ha consistido en inspeccionar visualmente los datos de CRI, trazar ciertos segmentos y determinar la magnitud del evento como se describe a continuación: primero se comienza seleccionando un subconjunto de los datos CRI brutos para su trazado. Como referencia usaremos el FE del 22 de junio del 2015 anteriormente descrito e ilustrado en el panel derecho de la figura \ref{filter_result}. Por inspección se identifican las cuatro fases esenciales de un evento Forbush -inicio, fase principal, punto mínimo y fase de recuperación-. Un evento de Disminución de Forbush (FD) como se explicó en el capítulo 1, se caracteriza generalmente por una disminución que dura uno o más días, alcanzando un mínimo seguido de una recuperación gradual. En este proceso de identificación, el evento proyectado se descarta si falta alguna de estas fases. 
+
+La etapa siguiente, que es la determinación de la magnitud del evento FD. Para ello, hay que normalizar los datos, determinar el tamaño del evento, seleccionar el inicio del evento y el punto mínimo de reducción de intensidad. Dependiendo de la línea de base utilizada, el proceso de normalización puede abordarse por ejemplo utilizando la variación media de CR durante el periodo o el recuento previo al día del mínimo del FE, de tal manera que la magnitud queda determinada como:
+\begin{equation}
+    FD_{amplitude}(\%)=\frac{FD_{inicio}-mean}{mean} *100
+\end{equation}
+Cabe resaltar que aunque este método sigue siendo pertinente, recientemente se ha propuesto un método automatizado para hacer la identificación de Forbush (\cite{okike_2020}) que puede ser implementado en los datos del Observatorio Pierre Auger si se realiza una correcta catacterización del fondo a través de un análisis espectral mucho más detallado. En concordancia al análisis manual descrito, la figura \ref{22junio2015} muestra el resultado de la identificación de la amplitud de nuestro FD seleccionado que para nuestra señal filtrada es de $3.01\%$ en contraste a los reportes de las estaciones de neutrones que registraron un doble FD importante con una amplitud del $8,4\%$ y del $ 5,2\%$ en las estaciones polares (\cite{samara_2018}), o de las estimaciones realizadas a partir de datos satelitales del AMS que llega a valores de $15.2\%$ (\cite{wang_2023}), lo que confirma la necesidad de remover las otras componentes periódicas de la señal.
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{Figs/Figr/2015-06-22 00:00:00.png}
+    \caption{Pendiente modificar con Autocorrelación para eliminar el ruido.}
+    \label{22junio2015}
+    \end{figure}
 
 \section{Datos abiertos y ciencia ciudadana}
