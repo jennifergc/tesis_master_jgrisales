@@ -22,6 +22,9 @@
 \documentclass[letter,oneside,12pt,spanish]{report}          % Encabezados
 % ------------------------------------------------------------------------
 \usepackage{uislatexstyleAPA}                           % Libreria UIS APA
+\usepackage[style=apa]{biblatex} % JENNNNN
+
+\usepackage[utf8]{inputenc}
 %------------------------------
 % ------------------------------------------------------------------------
 % Ingrese en este punto las librerías específicas de usuario
@@ -42,12 +45,12 @@
 \usepackage{pdflscape}
 \usepackage{longtable}
 \usepackage{siunitx}
-\usepackage[acronym]{glossaries}
-\makeglossaries
-\setacronymstyle{long-short-desc}
+%\usepackage[acronym]{glossaries}
+%\makeglossaries
+%\setacronymstyle{long-short-desc}
 
 % ------------------------- NUEVO-----------------------------------------------
-\bibliography{bib_jgrisales.bib}
+\bibliography{bib_jgrisales_2024.bib}
 % ------------------------------------------------------------------------
 \begin{document}                                     % Inicio de documento
 % ------------------------------------------------------------------------
@@ -75,27 +78,6 @@
 %\listofanexo
 % ------------------------------------------------------------------------
 %\include{Secs/glosario}                             % Glosario de términos
-%\newacronym[description={Rayos Cósmicos, por sus siglas en ingles}]{cr}{CR}{Cosmic Rays (Rayos Cósmicos)}
-\newacronym{cr}{CR}{Cosmic Rays (Rayos Cósmicos)}
-\newacronym{eas}{EAS}{Extensive Air Showers (Cascadas Aéreas Extensas)}
-\newacronym{gcr}{GCR}{Galactic Cosmic Rays (Rayos Cósmicos Galácticos)}
-\newacronym{cme}{CME}{Coronal Mass Ejections (Ejecciones de Masa Coronal)}
-\newacronym{icme}{ICME}{Interplanetary Coronal Mass Ejections (Ejecciones de Masa Coronal Interplanetarias)}
-\newacronym{wcd}{WCD}{Water Cherenkov Detector (Detector Chérenkov de Agua)}
-\newacronym[description={Detectores de superficie del Observatorio Pierre Auger}]{sd}{SD}{Surface detector}
-\newacronym{fds}{FD}{Fluorescence Detector (Detector de FLuorescencia)}
-\newacronym{pmt}{PMT}{Photomultiplier Tube}
-\newacronym{FADC}{FADC}{Flash Analog-to-Digital Converter}
-\newacronym{grb}{GRB}{Gamma Ray Burst}
-\newacronym{cri}{CRI}{Cosmic Ray Intensity}
-\newacronym{fd}{FD}{Decrecimiento Forbush}
-\newacronym{fe}{FE}{Evento Forbush}
-
-
-
-
-\printglossary[type=\acronymtype,title=Acrónimos]
-
 % ------------------------------------------------------------------------
 % Contenido del Informe
 % ------------------------------------------------------------------------
@@ -105,7 +87,7 @@
 % Capítulos
 % ------------------------------------------------------------------------
 \include{Prelim/intro}   % Introducción
-\include{Prelim/Objtivos}   % Objetivos
+%\include{Prelim/Obejtivos}   % Objetivos
 \include{Secs/chapter_1}  
 \include{Secs/chapter_2} 
 \include{Secs/chapter_3}
@@ -115,7 +97,6 @@
 % ------------------------------------------------------------------------
 \addcontentsline{toc}{chapter}{Referencias Bibliográficas}\newpage %%% JENN REMOVIDO
 %\noindent
-%\bibliographystyle{apalike}
 \printbibliography %%% JENN REMOVIDO
 % ------------------------------------------------------------------------
 % Anexos
@@ -124,5 +105,5 @@
 %\include{Secs/APENDICE_B}   
 %\include{Secs/APENDICE_C}
 % ------------------------------------------------------------------------
-\end{document}                                          % Fin de documento
+\end{document}      % Fin de documento
 % ------------------------------------------------------------------------ 
